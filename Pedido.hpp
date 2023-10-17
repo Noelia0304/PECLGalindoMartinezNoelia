@@ -1,5 +1,3 @@
-
-
 class Pedido
 {
 public:
@@ -7,5 +5,4 @@ public:
     ~Pedido();
 
 };
-
 
