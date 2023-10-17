@@ -1,5 +1,4 @@
-#ifndef PEDIDO_HPP
-#define PEDIDO_HPP
+
 
 class Pedido
 {
@@ -9,4 +8,4 @@ public:
 
 };
 
-#endif // PEDIDO_HPP
+
