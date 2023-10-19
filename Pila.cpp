@@ -5,25 +5,25 @@ Pila::Pila()
     ultimo = NULL;
     longitud = 0;
 }
-void Pila::insertar(int v)
+void Pila::insertar(Pedido p)
 {
     pnodoPila nuevo;
-    nuevo = new NodoPila(v, ultimo);
+    nuevo = new NodoPila(p, ultimo);
     ultimo = nuevo;
     longitud++;
 }
 int Pila::extraer()
 {
     pnodoPila nodo;
-    int v;
+    Pedido p;
     if(!ultimo)
         return 0;
     nodo = ultimo;
     ultimo = nodo->siguiente;
-    v = nodo->valor;
+    p = nodo->valor;
     longitud--;
     delete nodo;
-    return v;
+    return p;
 }
 int Pila::cima()
 {
