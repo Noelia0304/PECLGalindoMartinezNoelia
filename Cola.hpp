@@ -5,7 +5,7 @@ public:
     Cola();
     ~Cola();
 
-    void insertar(int v);
+    void insertar(Pedido p);
     int eliminar();
     void mostrar();
     int verPrimero();
