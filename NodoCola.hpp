@@ -4,7 +4,7 @@ using namespace std;
 class NodoCola
 {
 public:
-    NodoCola(int v, NodoCola* sig = NULL);
+    NodoCola(Pedido p, NodoCola* sig = NULL);
     ~NodoCola();
 
 private:
