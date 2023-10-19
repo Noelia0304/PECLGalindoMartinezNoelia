@@ -4,7 +4,7 @@ class Pila
 public:
     Pila();
     ~Pila();
-    void insertar(int v);
+    void insertar(Pedido p);
     int extraer();
     int cima();
     void mostrar();
