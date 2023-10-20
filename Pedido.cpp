@@ -2,6 +2,7 @@
 
 Pedido::Pedido()
 {
+}
 void ::generarDNI()
 {
 	char letras[]= "TRWAGMYFPDXBNJZSQVHLCKE";
