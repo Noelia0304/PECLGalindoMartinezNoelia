@@ -3,8 +3,13 @@ class Pedido
 public:
     Pedido();
     ~Pedido();
+    
+private: 
+    string dniCliente;
     int id;
-    int n_Seguimiento;
-    bool es_urgente;
+    int nSeguimiento;
+    bool esUrgente;
+    
+    void generarDNI();
 };
 
