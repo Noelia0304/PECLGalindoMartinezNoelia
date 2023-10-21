@@ -2,6 +2,24 @@
 
 Pedido::Pedido()
 {
+    this->urgente = (rand() % 2);
+    this ->generarDNI();
+}
+
+void::generarID(bool esUrgente){
+    if(esUrgente){
+        id = (rand() % 51) + 49;
+    } else{
+        id = (rand() % 50) + 1;
+    }   
+}
+void::generarNSeguimiento(bool esUrgente){
+    if(esUrgente){
+        nSeguimiento = (rand() % 501) + 499;
+    } else{
+        nSeguimiento = (rand() % 499) + 1;
+    }
+        
 }
 void ::generarDNI()
 {
