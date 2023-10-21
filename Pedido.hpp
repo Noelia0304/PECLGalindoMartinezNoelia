@@ -1,3 +1,7 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
 class Pedido
 {
 public:
