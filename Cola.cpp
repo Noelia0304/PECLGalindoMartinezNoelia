@@ -6,10 +6,10 @@ Cola::Cola()
     ultimo = NULL;
     longitud = 0;
 }
-void Cola::insertar(Pedido p)
+void Cola::insertar(Pedido pedido)
 {
     pnodoCola nuevo;
-    nuevo = new NodoCola(p);
+    nuevo = new NodoCola(pedido);
     if(ultimo)
         ultimo->siguiente = nuevo;
         
@@ -32,7 +32,7 @@ void Cola::mostrar()
 int Cola::eliminar()
 {
     pnodoCola nodo;
-    Pedido p;
+    Pedido pedido;
     nodo = primero;
     if(!nodo)
         return 0;
@@ -42,7 +42,7 @@ int Cola::eliminar()
     if(!primero)
         ultimo = NULL;
     longitud--;
-    return p;
+    return pedido;
 }
 int Cola::verPrimero(){
     return primero->valor;
