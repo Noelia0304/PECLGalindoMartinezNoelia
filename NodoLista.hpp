@@ -13,3 +13,4 @@ private:
     friend class Lista;
 };
 
+typedef NodoLista* pnodoLista;
