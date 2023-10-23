@@ -8,7 +8,7 @@ public:
     ~NodoCola();
 
 private:
-    int valor;
+    Pedido pedido;
     NodoCola* siguiente;
     
     friend class Cola;
