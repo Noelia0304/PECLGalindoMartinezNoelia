@@ -25,6 +25,20 @@ int Lista::extraer()
     delete nodo;
     return pedido;
 }
+void Lista::mostrar()
+{
+    pnodoLista aux = ultimo;
+    cout << "\tEl contenido de la lista es: ";
+    while(aux){
+        cout << "-> "<< aux->valor;
+        aux = aux->siguiente;
+    }
+    cout << endl;
+}
+int Lista::getLongitud()
+{
+    return this->longitud;
+}
 
 Lista::~Lista()
 {
