@@ -1,12 +1,16 @@
-#ifndef NODOLISTA_HPP
-#define NODOLISTA_HPP
+#include <iostream>
+using namespace std;
 
 class NodoLista
 {
 public:
-    NodoLista();
+    NodoLista(Pedido pedido, NodoLista* sig = NULL);
     ~NodoLista();
-
+private:
+    Pedido pedido;
+    NodoLista* siguiente;
+    
+    friend class Lista;
 };
 
-#endif // NODOLISTA_HPP
+typedef NodoLista* pnodoLista;
