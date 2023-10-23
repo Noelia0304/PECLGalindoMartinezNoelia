@@ -1,5 +1,7 @@
 #include "Pila.hpp"
 
+using namespace std;
+
 Pila::Pila()
 {
     ultimo = NULL;
