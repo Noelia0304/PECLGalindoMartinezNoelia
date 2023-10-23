@@ -1,8 +1,8 @@
 #include "NodoCola.hpp"
 
-NodoCola::NodoCola(Pedido p, NodoCola* sig)
+NodoCola::NodoCola(Pedido pedido, NodoCola* sig)
 {
-    valor = p;
+    valor = pedido;
     siguiente = sig;
 }
 
