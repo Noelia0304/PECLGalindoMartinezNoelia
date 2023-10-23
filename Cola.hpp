@@ -1,3 +1,4 @@
+#include "NodoCola.hpp"
 class Cola
 {
 public:
