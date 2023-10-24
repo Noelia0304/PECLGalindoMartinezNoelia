@@ -8,8 +8,8 @@ Lista::Lista()
 }
 void Lista::insertar(Pedido pedido)
 {
-    pnodoPila nuevo;
-    nuevo = new NodoPila(pedido, ultimo);
+    pnodoLista nuevo;
+    nuevo = new NodoLista(pedido, ultimo);
     if(ultimo)
         ultimo->siguiente = nuevo;
         
