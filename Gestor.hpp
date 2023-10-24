@@ -8,15 +8,15 @@ public:
     Gestor();
     ~Gestor();
     
-    void Generar12Pedidos();
+    void generar12Pedidos();
     void muestraPedidos();
     
 private:
     Pila pilaPedidos;
-    Cola ColaA;
-    Cola ColaB;
-    Cola ColaC;
-    Cola ColaD;
-    Lista ListaEstandar;
-    Lista ListaUrgente;
+    //Cola ColaA;
+    //Cola ColaB;
+    //Cola ColaC;
+    //Cola ColaD;
+    //Lista ListaEstandar;
+    //Lista ListaUrgente;
 };
