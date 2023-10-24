@@ -5,12 +5,12 @@ Gestor::Gestor()
 {
 }
 
-Gestor::crearLista(){
+Gestor::generar12Pedido(){
     
     for(int i = 0; i<12; ++i){ \\ no es lista, es pedido
         Pedido unPedido;
-        Lista listaPedidos;
-        listaPedidos.insertar(unPedido);
+        Pila pilaPedidos;
+        pilaPedidos.insertar(unPedido);
     }
     
     for (int i = 0; i< 12; ++i){
