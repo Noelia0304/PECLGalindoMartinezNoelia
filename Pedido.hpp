@@ -1,5 +1,3 @@
-#ifndef PEDIDO_HPP
-#define PEDIDO_HPP
 #include <iomanip>
 using namespace std;
 
