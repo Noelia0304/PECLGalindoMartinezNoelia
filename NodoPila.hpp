@@ -11,7 +11,6 @@ private:
     
     NodoPila* siguiente;
     Pedido valor;
-    
     friend class Pila;
 };
 
