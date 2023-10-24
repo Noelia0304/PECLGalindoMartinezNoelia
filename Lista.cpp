@@ -1,5 +1,5 @@
 #include "Lista.hpp"
-
+#include "Pedido.hpp"
 Lista::Lista()
 {
     primero = NULL;
@@ -25,7 +25,7 @@ void Lista::mostrar()
     pnodoLista aux = ultimo;
     cout << "\tEl contenido de la lista es: ";
     while(aux){
-        cout << "-> "<< aux->valor;
+        cout << "-> "<< aux->pedido;
         aux = aux->siguiente;
     }
     cout << endl;
