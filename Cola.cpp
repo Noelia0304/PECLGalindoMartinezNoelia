@@ -5,6 +5,7 @@ Cola::Cola()
     primero = NULL;
     ultimo = NULL;
     longitud = 0;
+    Pedido pedido;
 }
 void Cola::insertar(Pedido pedido)
 {
@@ -24,7 +25,7 @@ void Cola::mostrar()
     pnodoCola aux = primero;
     cout << "\tEl contenido de la cola es: ";
     while(aux){
-        cout << "-> "<< aux->valor;
+        cout << "-> "<< aux-> valor;
         aux = aux->siguiente;
     }
     cout << endl;
@@ -37,7 +38,7 @@ int Cola::eliminar()
     if(!nodo)
         return 0;
     primero = nodo->siguiente;
-    p = nodo->valor;
+    pedido = nodo->valor;
     delete nodo;
     if(!primero)
         ultimo = NULL;
