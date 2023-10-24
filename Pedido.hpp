@@ -16,7 +16,7 @@ private:
     string DNI;
     int ID;
     int nSeguimiento;
-    bool esUrgente;
+    bool urgente;
     
     
 };
