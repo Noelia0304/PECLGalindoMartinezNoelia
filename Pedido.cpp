@@ -14,9 +14,9 @@ bool Pedido::esUrgente()
 
 void Pedido::generarID(){
     if(urgente){
-        id = (rand() % 51) + 49;
+        ID = (rand() % 51) + 49;
     } else{
-        id = (rand() % 50) + 1;
+        ID = (rand() % 50) + 1;
     } 
 }
 void Pedido::generarNSeguimiento(){
