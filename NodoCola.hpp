@@ -1,10 +1,11 @@
 #include <iostream>
+#include "Pedido.hpp"
 using namespace std;
 
 class NodoCola
 {
 public:
-    NodoCola(Pedido p, NodoCola* sig = NULL);
+    NodoCola(Pedido (p), NodoCola* sig = NULL);
     ~NodoCola();
 
 private:
