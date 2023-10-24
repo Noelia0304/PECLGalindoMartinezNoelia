@@ -1,11 +1,11 @@
-#include <iostream> 
+#ifndef NODOPILA_HPP
+#define NODOPILA_HPP
 
-using namespace std;
 
 class NodoPila
 {
 public:
-    NodoPila(Pedido p, NodoPila* sig = NULL);
+    NodoPila(Pedido p, NodoPila* sig = nullptr);
     ~NodoPila();
 private:
     Pedido pedido;
