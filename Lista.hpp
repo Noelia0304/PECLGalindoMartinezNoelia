@@ -1,6 +1,7 @@
 #ifndef LISTA_HPP
 #define LISTA_HPP
 #include "NodoLista.hpp"
+#include "Pedido.hpp"
 class Lista
 {
 public:
