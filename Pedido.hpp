@@ -5,8 +5,12 @@ using namespace std;
 class Pedido
 {
 public:
-    Pedido();
+    Pedido(string dniCliente, int id, int nSeguimiento);
     ~Pedido();
+    void generarDNI();
+    void generarID();
+    void generarNSeguimiento();
+    void mostrar();
     
 private: 
     string dniCliente;
@@ -14,6 +18,6 @@ private:
     int nSeguimiento;
     bool esUrgente;
     
-    void generarDNI();
+    
 };
 
