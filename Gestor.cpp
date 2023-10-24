@@ -6,12 +6,12 @@ Gestor::Gestor()
 }
 
 Gestor::generar12Pedido(){
-    
-    for(int i = 0; i<12; ++i){ \\ no es lista, es pedido
-        Pedido unPedido;
-        Pila pilaPedidos;
-        pilaPedidos.insertar(unPedido);
-    }
+    if (pilaPedidos.size()<= 36){
+        for(int i = 0; i<12; ++i){ \\ no es lista, es pedido
+            Pedido unPedido;
+            pilaPedidos.insertar(unPedido);
+        }
+    fo    }
     
     for (int i = 0; i< 12; ++i){
          pilaPedidos.mostrar();
