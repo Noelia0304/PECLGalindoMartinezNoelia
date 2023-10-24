@@ -66,7 +66,7 @@ int main(int argc, char** argv)
         switch(opcion) {
 
         case 'A':
-            // gestor.genera12Pedidos();
+                gestor.genera12Pedidos();
             break;
         case 'B':
             // gestor.muestraPedidos();
