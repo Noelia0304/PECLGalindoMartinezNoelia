@@ -1,4 +1,5 @@
 #include "NodoLista.hpp"
+#include "Pedido.hpp"
 class Lista
 {
 public:
