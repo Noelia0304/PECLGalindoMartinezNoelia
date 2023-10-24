@@ -13,5 +13,10 @@ public:
     
 private:
     Pila pilaPedidos;
-
+    Cola ColaA;
+    Cola ColaB;
+    Cola ColaC;
+    Cola ColaD;
+    Lista ListaEstandar;
+    Lista ListaUrgente;
 };
