@@ -5,7 +5,7 @@ using namespace std;
 class NodoLista
 {
 public:
-    NodoLista(Pedido pedido, NodoLista* sig = NULL);
+    NodoLista(Pedido p, NodoLista* sig = NULL);
     ~NodoLista();
 private:
     Pedido pedido;
