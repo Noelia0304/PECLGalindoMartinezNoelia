@@ -5,7 +5,6 @@ Cola::Cola()
     primero = NULL;
     ultimo = NULL;
     longitud = 0;
-    Pedido pedido;
 }
 void Cola::insertar(Pedido pedido)
 {
