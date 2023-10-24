@@ -8,7 +8,8 @@ public:
     Gestor();
     ~Gestor();
     
-    
+    void Generar12Pedidos();
+    void muestraPedidos();
     
 private:
     Pila pilaPedidos;
