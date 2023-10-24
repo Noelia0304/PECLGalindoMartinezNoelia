@@ -4,6 +4,8 @@ Pedido::Pedido()
 {
     this->urgente = (rand() % 2);
     this ->generarDNI();
+    this ->generarID();
+    this ->generarNSeguimiento();
 }
 
 void Pedido::generarID(bool esUrgente){
@@ -11,7 +13,7 @@ void Pedido::generarID(bool esUrgente){
         id = (rand() % 51) + 49;
     } else{
         id = (rand() % 50) + 1;
-    }   
+    } 
 }
 void Pedido::generarNSeguimiento(bool esUrgente){
     if(esUrgente){
