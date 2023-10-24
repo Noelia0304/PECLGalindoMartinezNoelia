@@ -7,5 +7,10 @@ class Gestor
 public:
     Gestor();
     ~Gestor();
+    
+    
+    
+private:
+    Pila pilaPedidos;
 
 };
