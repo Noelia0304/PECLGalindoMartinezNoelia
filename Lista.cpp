@@ -3,13 +3,20 @@
 Lista::Lista()
 {
     primero = NULL;
+    ultimo = NULL;
     longitud = 0;
 }
 void Lista::insertar(Pedido pedido)
 {
     pnodoPila nuevo;
     nuevo = new NodoPila(pedido, ultimo);
+    if(ultimo)
+        ultimo->siguiente = nuevo;
+        
     ultimo = nuevo;
+    
+    if(!primero)
+        primero = nuevo;
     longitud++;
 }
 int Lista::extraer()
