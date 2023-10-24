@@ -1,3 +1,5 @@
+#ifndef NODOCOLA_HPP
+#define NODOCOLA_HPP
 #include <iostream>
 using namespace std;
 
