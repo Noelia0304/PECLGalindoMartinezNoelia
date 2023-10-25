@@ -11,6 +11,7 @@ public:
     Gestor();
     ~Gestor();
     
+    int PedidosEnPila();
     void generar12Pedidos();
     void muestraPedidos();
     
