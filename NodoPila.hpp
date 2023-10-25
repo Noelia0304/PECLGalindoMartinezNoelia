@@ -2,16 +2,15 @@
 #define NODOPILA_HPP
 #include "Pedido.hpp"
 #include <stdio.h>
-
 using namespace std;
 
 class NodoPila
 {
 public:
-    NodoPila(Pedido p, NodoPila* sig = nullptr);
+    NodoPila(Pedido p, NodoPila* sig = NULL);
     ~NodoPila();
 private:
-    Pedido pedido;
+    Pedido valor;
     NodoPila* siguiente;
     
     friend class Pila;
