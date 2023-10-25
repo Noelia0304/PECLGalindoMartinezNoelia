@@ -44,10 +44,21 @@ void Pila::mostrar()
     }
     cout << endl;
 }
+
 int Pila::getLongitud()
 {
     return this->longitud;
 }
+
+void Pila::desapilar()
+{
+    while (ultimo){
+    pnodoPila nodo = ultimo;
+    ultimo = ultimo->siguiente;
+    delete nodo;
+    }
+}
+    
 Pila::~Pila()
 {
     pnodoPila aux;
