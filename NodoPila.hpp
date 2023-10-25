@@ -1,6 +1,6 @@
-#include <iostream> 
+#ifndef NODOPILA_HPP
+#define NODOPILA_HPP
 #include "Pedido.hpp"
-using namespace std;
 
 class NodoPila
 {
@@ -16,3 +16,5 @@ private:
 
 
 typedef NodoPila* pnodoPila;
+
+#endif // NODOPILA_HPP
