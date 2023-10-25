@@ -24,9 +24,9 @@ void Cola::insertar(Pedido pedido)
 void Cola::mostrar()
 {
     pnodoCola aux = primero;
-    cout << "\tEl contenido de la cola es: ";
+    cout << "\t" << setw(10) <<"\tEl contenido de la cola es: " << endl;
     while(aux){
-        cout << "-> "<< aux-> valor;
+        aux-> valor.mostrar();
         aux = aux->siguiente;
     }
     cout << endl;
