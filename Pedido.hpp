@@ -1,3 +1,5 @@
+#ifndef PEDIDO_HPP
+#define PEDIDO_HPP
 #include <iomanip>
 using namespace std;
 
@@ -16,7 +18,6 @@ private:
     int ID;
     int nSeguimiento;
     bool urgente;
-    
-    
 };
 
+#endif // PEDIDO_HPP
