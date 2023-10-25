@@ -1,6 +1,9 @@
 #ifndef NODOPILA_HPP
 #define NODOPILA_HPP
 #include "Pedido.hpp"
+#include <stdio.h>
+
+using namespace std;
 
 class NodoPila
 {
