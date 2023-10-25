@@ -1,8 +1,9 @@
-#ifndef PILA_HPP
-#define PILA_HPP
+#ifndef LISTA_HPP
+#define LISTA_HPP
 #include <iostream>
 #include "NodoLista.hpp"
 #include "Pedido.hpp"
+using namespace std;
 
 class Lista
 {
@@ -18,4 +19,4 @@ private:
     int longitud;
 };
 
-#endif // PILA_HPP
+#endif // LISTA_HPP
