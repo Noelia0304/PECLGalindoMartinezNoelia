@@ -37,7 +37,7 @@ Pedido Cola::eliminar()
     Pedido pedido;
     nodo = primero;
     if(!nodo)
-        return 0;
+        return pedido;
     primero = nodo->siguiente;
     pedido = nodo->valor;
     delete nodo;
