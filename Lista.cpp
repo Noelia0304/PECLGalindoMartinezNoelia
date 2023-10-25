@@ -25,7 +25,7 @@ void Lista::mostrar()
     pnodoLista aux = ultimo;
     cout << "\tEl contenido de la lista es: ";
     while(aux){
-        cout << "-> "<< aux->pedido;
+        cout << "-> "<< aux->valor;
         aux = aux->siguiente;
     }
     cout << endl;
