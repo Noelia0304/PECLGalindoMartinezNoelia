@@ -1,6 +1,7 @@
 #ifndef NODOLISTA_HPP
 #define NODOLISTA_HPP
 #include "Pedido.hpp"
+#include <iostream>
 using namespace std;
 
 class NodoLista
