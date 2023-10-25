@@ -1,7 +1,6 @@
 #ifndef PEDIDO_HPP
 #define PEDIDO_HPP
-#include <iomanip>
-#include <iostream>
+#include <stdio.h>
 using namespace std;
 
 class Pedido
