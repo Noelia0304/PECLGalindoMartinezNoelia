@@ -12,9 +12,9 @@ int main(int argc, char** argv)
         cout << "\n\t--------------------------------------------------------------"
                 "--------\n";
         cout << "\tPedidos en la pila -> " <<  gestor.PedidosEnPila()
-             << "\n\tPedidos en las colas:\n \t\tSala A-> " << 0 /*gestor.PedidosEnSalaA() */ << "\tSala B-> "
-             << 0 /*gestor.PedidosEnSalaB() */ << "\tSala C-> " << 0 /*gestor.PedidosEnSalaC() */ << "\tSala D-> "
-             << 0 /*gestor.PedidosEnSalaD()*/
+             << "\n\tPedidos en las colas:\n \t\tSala A-> " << gestor.PedidosEnSalaA() << "\tSala B-> "
+             << gestor.PedidosEnSalaB()  << "\tSala C-> " << gestor.PedidosEnSalaC() << "\tSala D-> "
+             << gestor.PedidosEnSalaD()
              << " \n\tPedidos en las listas:\n \t\tEstandar-> "
              << 0 /*gestor.PedidosEnListaEstandar()*/ << "\tUrgentes-> " << 0 /*gestor.PedidosEnListaUrgentes()*/
              << "\n\tPedidos en el arbol -> " << 0                            /*gestor.PedidosEnArbol()*/
