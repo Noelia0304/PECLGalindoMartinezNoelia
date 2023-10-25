@@ -9,8 +9,8 @@ public:
     Pila();
     ~Pila();
     void insertar(Pedido pedido);
-    int extraer();
-    int cima();
+    Pedido extraer();
+    Pedido cima();
     void mostrar();
     int getLongitud();
 
