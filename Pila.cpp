@@ -29,7 +29,7 @@ Pedido Pila::extraer()
 Pedido Pila::cima()
 {
     Pedido pedido;
-    pnodoPila nodo;
+    //pnodoPila nodo;
     if(!ultimo)
         return pedido;
     return ultimo->valor;
