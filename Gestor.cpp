@@ -3,12 +3,13 @@
 
 Gestor::Gestor()
 {
-    Pedido unPedido;
+    
 }
 
 void Gestor::generar12Pedidos(){
     if (pilaPedidos.getLongitud()<= 36){
-        for(int i = 0; i<12; ++i){ 
+        for(int i = 0; i<12; ++i){
+            Pedido unPedido;
             pilaPedidos.insertar(unPedido);
         }
     }
