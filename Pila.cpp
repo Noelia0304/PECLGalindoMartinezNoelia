@@ -1,6 +1,5 @@
 #include "Pila.hpp"
-
-using namespace std;
+#include "Pedido.hpp"
 
 Pila::Pila()
 {
