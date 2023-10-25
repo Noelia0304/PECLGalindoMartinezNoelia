@@ -3,7 +3,7 @@
 
 NodoLista::NodoLista(Pedido p, NodoLista* sig)
 {
-    pedido = p;
+    valor = p;
     siguiente = sig;
 }
 
