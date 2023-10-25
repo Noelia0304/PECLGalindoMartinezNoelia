@@ -30,15 +30,15 @@ Pedido Pila::cima()
 {
     pnodoPila nodo;
     if(!ultimo)
-        return 0;
-    return ultimo->pedido;
+        return nodo;
+    return ultimo->valor;
 }
 void Pila::mostrar()
 {
     pnodoPila aux = ultimo;
     cout << "\tEl contenido de la pila es: ";
     while(aux){
-        cout << "-> "<< aux->pedido;
+        cout << "-> "<< aux->valor;
         aux = aux->siguiente;
     }
     cout << endl;
