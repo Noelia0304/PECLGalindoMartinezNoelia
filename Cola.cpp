@@ -8,6 +8,7 @@ Cola::Cola()
     ultimo = NULL;
     longitud = 0;
 }
+
 void Cola::insertar(Pedido pedido)
 {
     pnodoCola nuevo;
@@ -21,6 +22,7 @@ void Cola::insertar(Pedido pedido)
         primero = nuevo;
     longitud++;
 }
+
 void Cola::mostrar()
 {
     pnodoCola aux = primero;
@@ -31,6 +33,7 @@ void Cola::mostrar()
     }
     cout << endl;
 }
+
 Pedido Cola::eliminar()
 {
     pnodoCola nodo;
@@ -46,9 +49,16 @@ Pedido Cola::eliminar()
     longitud--;
     return pedido;
 }
+
 Pedido Cola::verPrimero(){
     return primero->valor;
 }
+
+int Cola::getLongitud()
+{
+    return this->longitud;
+}
+
 Cola::~Cola()
 {
     while(primero)
