@@ -14,7 +14,7 @@ public:
     void mostrar();
     ~Pedido(); 
 private: 
-    string DNI;
+    char [10] DNI;
     int ID;
     int nSeguimiento;
     bool urgente;
