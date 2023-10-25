@@ -10,7 +10,7 @@ public:
     NodoLista(Pedido (p), NodoLista* sig = NULL);
     ~NodoLista();
 private:
-    Pedido pedido;
+    Pedido valor;
     NodoLista* siguiente;
     
     friend class Lista;
