@@ -14,7 +14,7 @@ public:
     int PedidosEnPila();
     void generar12Pedidos();
     void muestraPedidos();
-    
+    void borraPedidosPila();
 private:
     Pila pilaPedidos;
     //Cola ColaA;
