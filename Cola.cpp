@@ -1,5 +1,6 @@
 #include "Cola.hpp"
 #include "Pedido.hpp"
+#include <iostream>
 
 Cola::Cola()
 {
