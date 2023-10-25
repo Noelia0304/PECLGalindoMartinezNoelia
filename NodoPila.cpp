@@ -3,7 +3,7 @@
 
 NodoPila::NodoPila(Pedido (p), NodoPila* sig )
 {
-    pedido = p;
+    valor = p;
     siguiente = sig;
 }
 
