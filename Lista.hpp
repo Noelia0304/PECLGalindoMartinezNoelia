@@ -1,3 +1,5 @@
+#ifndef PILA_HPP
+#define PILA_HPP
 #include "NodoLista.hpp"
 #include "Pedido.hpp"
 class Lista
@@ -15,4 +17,4 @@ private:
     int longitud;
 };
 
-
+#endif // PILA_HPP
