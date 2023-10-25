@@ -1,3 +1,5 @@
+#ifndef GESTOR_HPP
+#define GESTOR_HPP
 #include <iostream>
 #include <iomanip>
 #include "Pila.hpp"
@@ -21,3 +23,5 @@ private:
     //Lista ListaEstandar;
     //Lista ListaUrgente;
 };
+
+#endif // GESTOR_HPP
