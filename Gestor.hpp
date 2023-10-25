@@ -16,6 +16,11 @@ public:
     void generar12Pedidos();
     void muestraPedidos();
     void borraPedidosPila();
+    void encolarPedidos();
+    int PedidosEnSalaA();
+    int PedidosEnSalaB();
+    int PedidosEnSalaC();
+    int PedidosEnSalaD();
     
 private:
     Pila pilaPedidos;
