@@ -31,7 +31,7 @@ void Cola::mostrar()
     }
     cout << endl;
 }
-int Cola::eliminar()
+Pedido Cola::eliminar()
 {
     pnodoCola nodo;
     Pedido pedido;
@@ -46,7 +46,7 @@ int Cola::eliminar()
     longitud--;
     return pedido;
 }
-int Cola::verPrimero(){
+Pedido Cola::verPrimero(){
     return primero->valor;
 }
 Cola::~Cola()
