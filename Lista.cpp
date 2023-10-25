@@ -22,9 +22,9 @@ void Lista::insertar(Pedido pedido)
 void Lista::mostrar()
 {
     pnodoLista aux = ultimo;
-    cout << "\tEl contenido de la lista es: ";
+    cout << "\t" << setw(10) << "\tEl contenido de la lista es: " << endl;
     while(aux){
-        cout << "-> "<< aux->valor;
+        aux->valor.mostrar();
         aux = aux->siguiente;
     }
     cout << endl;
