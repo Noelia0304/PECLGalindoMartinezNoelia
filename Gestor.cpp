@@ -23,10 +23,10 @@ void Gestor::muestraPedidos()
      pilaPedidos.mostrar();
 }
 
-//void Gestor::borraPedidosPila()
-//{
-    
-//}
+void Gestor::borraPedidosPila()
+{
+    pilaPedidos.desapilar();
+}
 Gestor::~Gestor()
 {
 }
