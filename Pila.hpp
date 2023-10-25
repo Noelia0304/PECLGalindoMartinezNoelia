@@ -13,6 +13,7 @@ public:
     Pedido cima();
     void mostrar();
     int getLongitud();
+    void desapilar();
 
 private:
     pnodoPila ultimo;
