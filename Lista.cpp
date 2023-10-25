@@ -14,7 +14,6 @@ void Lista::insertar(Pedido pedido)
         ultimo->siguiente = nuevo;
         
     ultimo = nuevo;
-    
     if(!primero)
         primero = nuevo;
     longitud++;
