@@ -1,7 +1,9 @@
 #ifndef PILA_HPP
 #define PILA_HPP
+#include <iostream>
 #include "NodoLista.hpp"
 #include "Pedido.hpp"
+using namespace std;
 class Lista
 {
 public:
