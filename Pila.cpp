@@ -28,9 +28,10 @@ Pedido Pila::extraer()
 }
 Pedido Pila::cima()
 {
+    Pedido pedido;
     pnodoPila nodo;
     if(!ultimo)
-        return nodo;
+        return pedido;
     return ultimo->valor;
 }
 void Pila::mostrar()
