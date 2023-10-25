@@ -17,6 +17,7 @@ public:
 private:
     pnodoLista ultimo;
     int longitud;
+    pnodoLista primero;
 };
 
 #endif // LISTA_HPP
