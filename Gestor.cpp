@@ -17,13 +17,17 @@ void Gestor::generar12Pedidos(){
     }
 }
 
-void Gestor::muestraPedidos(){
-    
+void Gestor::muestraPedidos()
+{
     for (int i = 0; i< pilaPedidos.getLongitud(); ++i){
          pilaPedidos.mostrar();
     }
 }
 
+//void Gestor:: borraPedidosPila()
+//{
+    
+//}
 Gestor::~Gestor()
 {
 }
