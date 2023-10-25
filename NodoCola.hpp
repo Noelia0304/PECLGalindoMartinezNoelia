@@ -1,4 +1,5 @@
-#include <iostream>
+#ifndef NODOCOLA_HPP
+#define NODOCOLA_HPP
 #include "Pedido.hpp"
 using namespace std;
 
@@ -16,3 +17,5 @@ private:
 };
 
 typedef NodoCola* pnodoCola;
+
+#endif // NODOCOLA_HPP
