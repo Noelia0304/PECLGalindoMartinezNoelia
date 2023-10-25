@@ -42,11 +42,11 @@ void Pedido::generarDNI()
 }
 void Pedido::mostrar()
 {
-    string urgencia = "Estandar";
+    string urgencia = "estandar";
     if(urgente)
-        urgencia = "Urgente";
+        urgencia = "urgente";
     
-    cout << "\t" << setw(10) << DNI << "con ID" << ID << "del tipo" << urgencia << "con numero de seguimiento" << nSeguimiento << endl;
+    cout << "\t" << setw(10) << DNI << " con ID " << ID << " del tipo " << urgencia << " con numero de seguimiento " << nSeguimiento << endl;
 }
 Pedido::~Pedido()
 {
