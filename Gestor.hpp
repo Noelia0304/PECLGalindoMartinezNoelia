@@ -21,6 +21,8 @@ public:
     int PedidosEnSalaB();
     int PedidosEnSalaC();
     int PedidosEnSalaD();
+    void muestraPedidosSalasAyB();
+    void muestraPedidosSalasCyD();
     
 private:
     Pila pilaPedidos;
