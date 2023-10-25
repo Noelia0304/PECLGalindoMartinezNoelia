@@ -1,4 +1,5 @@
-#include <iostream>
+#ifndef NODOLISTA_HPP
+#define NODOLISTA_HPP
 #include "Pedido.hpp"
 using namespace std;
 
@@ -15,3 +16,5 @@ private:
 };
 
 typedef NodoLista* pnodoLista;
+
+#endif // NODOLISTA_HPP
