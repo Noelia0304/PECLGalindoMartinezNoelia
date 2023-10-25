@@ -65,6 +65,22 @@ int Gestor::PedidosEnSalaD(){
    return ColaD.getLongitud();
 }
 
+void Gestor:: muestraPedidosSalasAyB()
+{
+    cout << " Los pedidos en las salas A y B son: " << endl;
+    ColaA.mostrar();
+    ColaB.mostrar();
+    cout << endl;
+}
+
+void Gestor:: muestraPedidosSalasCyD()
+{
+    cout << " Los pedidos en las salas C y D son: " << endl;
+    ColaC.mostrar();
+    ColaD.mostrar();
+    cout << endl;
+}
+
 Gestor::~Gestor()
 {
 }
