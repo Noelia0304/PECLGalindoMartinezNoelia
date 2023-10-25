@@ -13,8 +13,6 @@ void Gestor::generar12Pedidos(){
             pilaPedidos.insertar(unPedido);
         }
     }
-    
-    
 }
 
 void Gestor::muestraPedidos(){
