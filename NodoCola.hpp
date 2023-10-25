@@ -1,7 +1,7 @@
 #ifndef NODOCOLA_HPP
 #define NODOCOLA_HPP
 #include "Pedido.hpp"
-#include <stdio.h>
+#include <iostream>
 using namespace std;
 
 class NodoCola
