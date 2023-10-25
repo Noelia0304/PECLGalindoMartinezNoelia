@@ -28,7 +28,10 @@ void Gestor::borraPedidosPila()
     pilaPedidos.desapilar();
 }
 
-
+void Gestor::encolarPedidos()
+{
+    
+}
 Gestor::~Gestor()
 {
 }
