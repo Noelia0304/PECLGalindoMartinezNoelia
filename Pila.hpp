@@ -1,4 +1,8 @@
+#ifndef PILA_HPP
+#define PILA_HPP
 #include "NodoPila.hpp"
+#include "Pedido.hpp"
+
 class Pila
 {
 public:
@@ -14,3 +18,5 @@ private:
     pnodoPila ultimo;
     int longitud;
 };
+
+#endif // PILA_HPP
