@@ -8,7 +8,7 @@ Gestor::Gestor()
 
 void Gestor::generar12Pedidos(){
     if (pilaPedidos.getLongitud()<= 36){
-        for(int i = 0; i<12; ++i){ // no es lista, es pedido
+        for(int i = 0; i<12; ++i){ 
             pilaPedidos.insertar(unPedido);
         }
     }
