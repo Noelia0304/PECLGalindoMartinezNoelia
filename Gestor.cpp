@@ -20,9 +20,7 @@ void Gestor::generar12Pedidos(){
 
 void Gestor::muestraPedidos()
 {
-    for (int i = 0; i< pilaPedidos.getLongitud(); ++i){
-         pilaPedidos.mostrar();
-    }
+     pilaPedidos.mostrar();
 }
 
 void Gestor::borraPedidosPila()
