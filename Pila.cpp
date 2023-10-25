@@ -56,6 +56,7 @@ void Pila::desapilar()
     pnodoPila nodo = ultimo;
     ultimo = ultimo->siguiente;
     delete nodo;
+    longitud--;
     }
 }
     
