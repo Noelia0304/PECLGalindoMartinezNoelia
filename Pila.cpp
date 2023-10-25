@@ -37,9 +37,9 @@ Pedido Pila::cima()
 void Pila::mostrar()
 {
     pnodoPila aux = ultimo;
-    cout << "\tEl contenido de la pila es: ";
+    cout <<"\t" << setw(10) << "\tEl contenido de la pila es: " << endl;
     while(aux){
-        cout << "-> "<< aux->valor;
+        aux->valor.mostrar();
         aux = aux->siguiente;
     }
     cout << endl;
