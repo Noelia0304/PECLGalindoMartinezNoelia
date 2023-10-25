@@ -3,7 +3,7 @@
 
 NodoCola::NodoCola(Pedido p, NodoCola* sig)
 {
-    pedido = p;
+    valor = p;
     siguiente = sig;
 }
 
