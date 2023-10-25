@@ -9,9 +9,9 @@ public:
     ~Cola();
 
     void insertar(Pedido pedido);
-    int eliminar();
+    Pedido eliminar();
     void mostrar();
-    int verPrimero();
+    Pedido verPrimero();
     
 private:
     pnodoCola primero, ultimo;
