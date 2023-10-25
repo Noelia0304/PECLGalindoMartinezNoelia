@@ -31,22 +31,22 @@ void Gestor::borraPedidosPila()
 void Gestor::encolarPedidos()
 {
     Pedido pedido;
-    for(int i=0; i <= pilaPedidos.getLongitud(); i++){
-        pilaPedidos.extraer();
-        if(pedido.esUrgente()){
-            if(ColaC.getLongitud() >= ColaD.getLongitud()){
-                ColaD.insertar(pedido);
+    while(pilaPedidos.getLongitud()!=0){
+          pilaPedidos.extraer(); 
+          if(pedido.esUrgente()){
+                if(ColaC.getLongitud() >= ColaD.getLongitud()){
+                    ColaD.insertar(pedido);
+                }else{
+                    ColaC.insertar(pedido);
+                }
             }else{
-                ColaC.insertar(pedido);
+                if(ColaA.getLongitud() >= ColaB.getLongitud()){
+                    ColaB.insertar(pedido);
+                }else{
+                    ColaA.insertar(pedido);
+                }   
             }
-        }else{
-            if(ColaA.getLongitud() >= ColaB.getLongitud()){
-                ColaB.insertar(pedido);
-            }else{
-                ColaA.insertar(pedido);
-            }   
         }
-    }
 }
 
 int Gestor::PedidosEnSalaA(){
