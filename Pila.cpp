@@ -13,12 +13,12 @@ void Pila::insertar(Pedido pedido)
     ultimo = nuevo;
     longitud++;
 }
-int Pila::extraer()
+Pedido Pila::extraer()
 {
     pnodoPila nodo;
     Pedido pedido;
     if(!ultimo)
-        return 0;
+        return pedido;
     nodo = ultimo;
     ultimo = nodo->siguiente;
     pedido = nodo->valor;
@@ -26,7 +26,7 @@ int Pila::extraer()
     delete nodo;
     return pedido;
 }
-int Pila::cima()
+Pedido Pila::cima()
 {
     pnodoPila nodo;
     if(!ultimo)
