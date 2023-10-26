@@ -69,7 +69,9 @@ int Gestor::PedidosEnSalaD(){
 void Gestor:: muestraPedidosSalasAyB()
 {
     cout << " Los pedidos en las salas A y B son: " << endl;
+    cout << "A: ";
     ColaA.mostrar();
+    cout << "B: ";
     ColaB.mostrar();
     cout << endl;
 }
@@ -86,10 +88,18 @@ void Gestor:: muestraPedidosSalasCyD()
 
 void Gestor:: borraPedidosColas()
 {
+    while(ColaA.getLongitud()! = 0){   
         ColaA.eliminar();
+    }
+    while(ColaB.getLongitud()! = 0){
         ColaB.eliminar();
+    }
+    while(ColaC.getLongitud()! = 0){
         ColaC.eliminar();
+    }
+    while(ColaD.getLongitud()! = 0){
         ColaD.eliminar();
+    }
         
 }
 
