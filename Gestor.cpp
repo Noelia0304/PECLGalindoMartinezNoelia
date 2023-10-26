@@ -84,7 +84,7 @@ void Gestor:: muestraPedidosSalasCyD()
     cout << endl;
 }
 
-void Gestor:: BorraPedidosColas()
+void Gestor:: borraPedidosColas()
 {
         ColaA.eliminar();
         ColaB.eliminar();
