@@ -30,10 +30,11 @@ void Gestor::borraPedidosPila()
 
 void Gestor::encolarPedidos()
 {
-    Pedido pedido;
+    
     while(pilaPedidos.getLongitud()!=0){
+          Pedido pedido;
           pilaPedidos.extraer(); 
-          if(pedido.esUrgente()){
+          if(pedido.esUrgente() == 1){
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
                     ColaD.insertar(pedido);
                 }else{
