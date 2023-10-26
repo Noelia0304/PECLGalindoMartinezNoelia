@@ -84,7 +84,7 @@ int main(int argc, char** argv)
                 gestor.muestraPedidosSalasCyD();
             break;
         case 'G':
-            // gestor.borraPedidosColas();
+                gestor.borraPedidosColas();
             break;
         case 'H':
             // gestor.enlistarPedidos();
