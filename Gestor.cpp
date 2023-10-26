@@ -77,10 +77,22 @@ void Gestor:: muestraPedidosSalasAyB()
 void Gestor:: muestraPedidosSalasCyD()
 {
     cout << " Los pedidos en las salas C y D son: " << endl;
+    cout << "C: ";
     ColaC.mostrar();
+    cout << "D: ";
     ColaD.mostrar();
     cout << endl;
 }
+
+void Gestor:: BorraPedidosColas()
+{
+        ColaA.eliminar();
+        ColaB.eliminar();
+        ColaC.eliminar();
+        ColaD.eliminar();
+        
+}
+
 
 Gestor::~Gestor()
 {
