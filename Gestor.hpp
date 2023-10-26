@@ -23,6 +23,7 @@ public:
     int PedidosEnSalaD();
     void muestraPedidosSalasAyB();
     void muestraPedidosSalasCyD();
+    void borraPedidosColas();
     
 private:
     Pila pilaPedidos;
