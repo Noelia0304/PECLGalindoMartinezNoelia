@@ -88,16 +88,16 @@ void Gestor:: muestraPedidosSalasCyD()
 
 void Gestor:: borraPedidosColas()
 {
-    while(ColaA.getLongitud()! = 0){   
+    while(ColaA.getLongitud() !=0){   
         ColaA.eliminar();
     }
-    while(ColaB.getLongitud()! = 0){
+    while(ColaB.getLongitud() !=0){
         ColaB.eliminar();
     }
-    while(ColaC.getLongitud()! = 0){
+    while(ColaC.getLongitud()!=0){
         ColaC.eliminar();
     }
-    while(ColaD.getLongitud()! = 0){
+    while(ColaD.getLongitud()!=0){
         ColaD.eliminar();
     }
         
