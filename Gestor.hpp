@@ -24,7 +24,7 @@ public:
     void muestraPedidosSalasAyB();
     void muestraPedidosSalasCyD();
     void borraPedidosColas();
-    
+    void reiniciar();
 private:
     Pila pilaPedidos;
     Cola ColaA;
