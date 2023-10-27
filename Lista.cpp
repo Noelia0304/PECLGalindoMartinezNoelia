@@ -9,6 +9,7 @@ Lista::Lista()
 void Lista::insertar(Pedido pedido)
 {
     pnodoLista nuevo;
+    posicion = pedido.getidPedido();
     nuevo = new NodoLista(pedido, ultimo);
     if(ultimo)
         ultimo->siguiente = nuevo;
