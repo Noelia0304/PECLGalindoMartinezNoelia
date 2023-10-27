@@ -14,6 +14,7 @@ public:
     void generarDNI();
     void mostrar();
     void generaridPedido();
+    int getidPedido();
     ~Pedido(); 
 private: 
     char DNI[10] ;
