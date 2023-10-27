@@ -47,6 +47,11 @@ void Pedido::generaridPedido()
     idPedido = 0;
 }
 
+int Pedido::getidPedido()
+{
+    return idPedido;
+}
+
 
 void Pedido::mostrar()
 {
