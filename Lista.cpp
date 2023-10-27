@@ -9,15 +9,23 @@ Lista::Lista()
 void Lista::insertar(Pedido pedido)
 {
     pnodoLista nuevo;
-    posicion = pedido.getidPedido();
-    nuevo = new NodoLista(pedido, ultimo);
-    if(ultimo)
-        ultimo->siguiente = nuevo;
+    nuevo = new NodoLista(pedido, nullptr);
+    
+    if(!ultimo || pedido.idPedido < ultimo->valor.idPedido){
+        nuevo->siguiente = ultimo;
+        ultimo = nuevo;
+    }else{
         
-    ultimo = nuevo;
-    if(!primero)
-        primero = nuevo;
-    longitud++;
+    }
+        
+    
+    /*if(primero)
+        primero->siguiente = nuevo;
+        
+    primero = nuevo;
+    if(!ultimo)
+        ultimo = nuevo;
+    longitud++;*/
 }
 
 void Lista::mostrar()
