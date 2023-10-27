@@ -105,7 +105,7 @@ void Gestor:: borraPedidosColas()
 
 void Gestor:: reiniciar()
 {
-    pilaPedidos.desapilar;
+    pilaPedidos.desapilar();
     ColaA.eliminar();
     ColaB.eliminar();
     ColaC.eliminar();
