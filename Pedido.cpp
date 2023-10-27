@@ -6,6 +6,7 @@ Pedido::Pedido()
     this ->generarDNI();
     this ->generarID();
     this ->generarNSeguimiento();
+    this ->generaridPedido();
 }
 bool Pedido::esUrgente()
 {
@@ -40,6 +41,13 @@ void Pedido::generarDNI()
 	this->DNI[8] = letras[numDNI % 23];
 	this->DNI[9] = '\0';
 }
+
+void Pedido::generaridPedido()
+{
+    idPedido = 0;
+}
+
+
 void Pedido::mostrar()
 {
     string urgencia = "estandar";
