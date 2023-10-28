@@ -50,6 +50,20 @@ Pedido Cola::eliminar()
     return pedido;
 }
 
+Pedido Cola::extraer()
+{
+    pnodoCola nodo;
+    Pedido pedido;
+    if(!ultimo)
+        return pedido;
+    nodo = ultimo;
+    ultimo = nodo->siguiente;
+    pedido = nodo->valor;
+    longitud--;
+    delete nodo;
+    return pedido;
+}
+
 Pedido Cola::verPrimero(){
     return primero->valor;
 }
