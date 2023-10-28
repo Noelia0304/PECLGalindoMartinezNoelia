@@ -10,6 +10,7 @@ public:
 
     void insertar(Pedido pedido);
     Pedido eliminar();
+    Pedido extraer();
     void mostrar();
     Pedido verPrimero();
     int getLongitud();
