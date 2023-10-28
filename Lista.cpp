@@ -11,12 +11,12 @@ void Lista::insertar(Pedido pedido)
     pnodoLista nuevo;
     nuevo = new NodoLista(pedido, nullptr);
     
-    if(!ultimo || pedido.idPedido < ultimo->valor.idPedido){
+    if(!ultimo || pedido.nSeguimiento < ultimo->valor.nSeguimiento){
         nuevo->siguiente = ultimo;
         ultimo = nuevo;
     }else{
         NodoLista* actual = ultimo;
-        while (actual->siguiente && pedido.idPedido >= actual->siguiente->valor.idPedido){
+        while (actual->siguiente && pedido.nSeguimiento >= actual->siguiente->valor.nSeguimiento){
             actual = actual->siguiente;
         }
         nuevo->siguiente = actual->siguiente;
