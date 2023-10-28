@@ -44,12 +44,6 @@ void Pedido::generarDNI()
 
 
 
-int Pedido::getidPedido()
-{
-    return idPedido;
-}
-
-
 void Pedido::mostrar()
 {
     string urgencia = "estandar";
