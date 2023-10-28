@@ -15,7 +15,12 @@ void Lista::insertar(Pedido pedido)
         nuevo->siguiente = ultimo;
         ultimo = nuevo;
     }else{
-        
+        NodoLista* actual = ultimo;
+        while (actual->siguiente && pedido.idPedido >= actual->siguiente->valor.idPedido){
+            actual = actual->siguiente;
+        }
+        nuevo->siguiente = actual->siguiente;
+        actual->siguiente = nuevo;
     }
         
     
@@ -24,8 +29,8 @@ void Lista::insertar(Pedido pedido)
         
     primero = nuevo;
     if(!ultimo)
-        ultimo = nuevo;
-    longitud++;*/
+        ultimo = nuevo;*/
+    longitud++;
 }
 
 void Lista::mostrar()
