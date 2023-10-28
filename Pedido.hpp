@@ -15,13 +15,14 @@ public:
     void mostrar();
     void generaridPedido();
     int getidPedido();
+    int idPedido;
     ~Pedido(); 
 private: 
     char DNI[10] ;
     int ID;
     int nSeguimiento;
     bool urgente;
-    int idPedido;
+    
 };
 
 #endif // PEDIDO_HPP
