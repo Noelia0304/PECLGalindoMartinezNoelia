@@ -20,6 +20,7 @@ void Pedido::generarID(){
         ID = (rand() % 50) + 1;
     } 
 }
+
 void Pedido::generarNSeguimiento(){
     if(urgente){
         nSeguimiento = (rand() % 501) + 499;
@@ -41,8 +42,6 @@ void Pedido::generarDNI()
 	this->DNI[8] = letras[numDNI % 23];
 	this->DNI[9] = '\0';
 }
-
-
 
 void Pedido::mostrar()
 {
