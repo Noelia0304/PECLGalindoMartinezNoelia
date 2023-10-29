@@ -33,7 +33,7 @@ void Gestor::encolarPedidos()
     
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
-          pilaPedidos.extraer(); 
+          pedido = pilaPedidos.extraer(); 
           if(pedido.esUrgente() == 1){
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
                     ColaD.insertar(pedido);
@@ -107,22 +107,22 @@ void Gestor::enlistarPedidos()
 {
     while(ColaA.getLongitud() !=0){
         Pedido pedido;
-        ColaA.extraer();
+        pedido = ColaA.extraer();
         ListaEstandar.insertar(pedido);
     }
     while(ColaB.getLongitud()!=0){
         Pedido pedido;
-        ColaB.extraer();
+        pedido = ColaB.extraer();
         ListaEstandar.insertar(pedido);
     }
     while(ColaC.getLongitud()!=0){
         Pedido pedido;
-        ColaC.extraer();
+        pedido = ColaC.extraer();
         ListaUrgente.insertar(pedido);
     }
     while(ColaD.getLongitud()!=0){
         Pedido pedido;
-        ColaD.extraer();
+        pedido = ColaD.extraer();
         ListaUrgente.insertar(pedido);
     }
 }
