@@ -6,6 +6,7 @@ Lista::Lista()
     ultimo = NULL;
     longitud = 0;
 }
+
 void Lista::insertar(Pedido pedido)
 {
     pnodoLista nuevo;
