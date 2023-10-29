@@ -105,23 +105,21 @@ void Gestor:: borraPedidosColas()
 
 void Gestor::enlistarPedidos()
 {
+    Pedido pedido; 
+    
     while(ColaA.getLongitud() !=0){
-        Pedido pedido;
         pedido = ColaA.extraer();
         ListaEstandar.insertar(pedido);
     }
     while(ColaB.getLongitud()!=0){
-        Pedido pedido;
         pedido = ColaB.extraer();
         ListaEstandar.insertar(pedido);
     }
     while(ColaC.getLongitud()!=0){
-        Pedido pedido;
         pedido = ColaC.extraer();
         ListaUrgente.insertar(pedido);
     }
     while(ColaD.getLongitud()!=0){
-        Pedido pedido;
         pedido = ColaD.extraer();
         ListaUrgente.insertar(pedido);
     }
