@@ -24,6 +24,9 @@ public:
     void muestraPedidosSalasAyB();
     void muestraPedidosSalasCyD();
     void borraPedidosColas();
+    void enlistarPedidos();
+    int PedidosEnListaUrgente();
+    int PedidosEnListaEstandar();
     void reiniciar();
 private:
     Pila pilaPedidos;
@@ -31,8 +34,8 @@ private:
     Cola ColaB;
     Cola ColaC;
     Cola ColaD;
-    Lista listaEstandar;
-    Lista listaUrgente;
+    Lista ListaEstandar;
+    Lista ListaUrgente;
 };
 
 #endif // GESTOR_HPP
