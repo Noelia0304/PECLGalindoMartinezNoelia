@@ -13,14 +13,13 @@ public:
     void generarNSeguimiento();
     void generarDNI();
     void mostrar();
-    void generaridPedido();
-    int nSeguimiento;
     ~Pedido(); 
+    
 private: 
     char DNI[10] ;
     int ID;
-    
     bool urgente;
+    int nSeguimiento;
     
 };
 
