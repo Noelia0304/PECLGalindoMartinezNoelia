@@ -103,6 +103,30 @@ void Gestor:: borraPedidosColas()
         
 }
 
+void enlistarPedidos()
+{
+    while(ColaA.getLongitud() !=0){
+        Pedido pedido;
+        ColaA.extraer();
+        listaEstandar.insertar(pedido);
+    }
+    while(ColaB.getLongitud()!=0){
+        Pedido pedido;
+        ColaB.extraer();
+        listaEstandar.insertar(pedido);
+    }
+    while(ColaC.getLongitud()!=0){
+        Pedido pedido;
+        ColaC.extraer();
+        listaUrgente.insertar(pedido);
+    }
+    while(ColaD.getLongitud()!=0){
+        Pedido pedido;
+        ColaD.extraer();
+        listaUrgente.insertar(pedido);
+    }
+}
+
 void Gestor:: reiniciar()
 {
     pilaPedidos.desapilar();
