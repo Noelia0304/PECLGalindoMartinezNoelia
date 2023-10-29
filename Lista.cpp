@@ -23,13 +23,6 @@ void Lista::insertar(Pedido pedido)
         actual->siguiente = nuevo;
     }
         
-    
-    /*if(primero)
-        primero->siguiente = nuevo;
-        
-    primero = nuevo;
-    if(!ultimo)
-        ultimo = nuevo;*/
     longitud++;
 }
 
