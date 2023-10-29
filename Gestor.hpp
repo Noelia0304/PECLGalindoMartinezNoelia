@@ -27,6 +27,8 @@ public:
     void enlistarPedidos();
     int PedidosEnListaUrgente();
     int PedidosEnListaEstandar();
+    void muestraPedidosEstandar();
+    void muestraPedidosUrgentes();
     void reiniciar();
 private:
     Pila pilaPedidos;
