@@ -135,6 +135,14 @@ int Gestor::PedidosEnListaUrgente(){
    return ListaUrgente.getLongitud();
 }
 
+void Gestor::muestraPedidosEstandar(){
+    ListaEstandar.mostrar();
+}
+
+void Gestor::muestraPedidosUrgentes(){
+    ListaUrgente.mostrar();
+}
+
 void Gestor:: reiniciar()
 {
     pilaPedidos.desapilar();
