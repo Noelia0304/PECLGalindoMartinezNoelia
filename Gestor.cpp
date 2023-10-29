@@ -106,7 +106,6 @@ void Gestor:: borraPedidosColas()
 void Gestor::enlistarPedidos()
 {
     Pedido pedido; 
-    
     while(ColaA.getLongitud() !=0){
         pedido = ColaA.extraer();
         ListaEstandar.insertar(pedido);
@@ -124,6 +123,7 @@ void Gestor::enlistarPedidos()
         ListaUrgente.insertar(pedido);
     }
 }
+
 
 int Gestor::PedidosEnListaEstandar(){
    return ListaEstandar.getLongitud();
