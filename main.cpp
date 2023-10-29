@@ -93,7 +93,7 @@ int main(int argc, char** argv)
                 gestor.muestraPedidosEstandar();
             break;
         case 'J':
-            // gestor.muestraPedidosUrgentes();
+                gestor.muestraPedidosUrgentes();
             break;
         case 'K':
             // gestor.buscarPedidos();
