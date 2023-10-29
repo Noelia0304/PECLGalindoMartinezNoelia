@@ -38,7 +38,7 @@ Pedido Cola::eliminar()
 {
     pnodoCola nodo;
     Pedido pedido;
-    nodo = primero;
+    nodo =primero;
     if(!nodo)
         return pedido;
     primero = nodo->siguiente;
