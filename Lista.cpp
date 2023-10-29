@@ -9,14 +9,14 @@ Lista::Lista()
 void Lista::insertar(Pedido pedido)
 {
     pnodoLista nuevo;
-    nuevo = new NodoLista(pedido, nullptr);
+    nuevo = new NodoLista(pedido, NULL);
     
-    if(!ultimo || pedido.nSeguimiento < ultimo->valor.nSeguimiento){
+    if(!ultimo || pedido.ID < ultimo->valor.ID){
         nuevo->siguiente = ultimo;
         ultimo = nuevo;
     }else{
         NodoLista* actual = ultimo;
-        while (actual->siguiente && pedido.nSeguimiento >= actual->siguiente->valor.nSeguimiento){
+        while (actual->siguiente && pedido.ID >= actual->siguiente->valor.ID){
             actual = actual->siguiente;
         }
         nuevo->siguiente = actual->siguiente;
