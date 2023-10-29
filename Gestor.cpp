@@ -124,7 +124,6 @@ void Gestor::enlistarPedidos()
     }
 }
 
-
 int Gestor::PedidosEnListaEstandar(){
    return ListaEstandar.getLongitud();
 }
