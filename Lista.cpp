@@ -22,7 +22,6 @@ void Lista::insertar(Pedido pedido)
         nuevo->siguiente = actual->siguiente;
         actual->siguiente = nuevo;
     }
-        
     longitud++;
 }
 
@@ -36,6 +35,7 @@ void Lista::mostrar()
     }
     cout << endl;
 }
+
 int Lista::getLongitud()
 {
     return this->longitud;
