@@ -11,7 +11,6 @@ public:
     Lista();
     ~Lista();
     void insertar(Pedido pedido);
-    int extraer();
     void mostrar();
     int getLongitud();
 
