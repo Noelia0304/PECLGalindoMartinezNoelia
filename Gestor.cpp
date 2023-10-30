@@ -143,10 +143,7 @@ void Gestor::muestraPedidosUrgentes(){
 void Gestor:: reiniciar()
 {
     pilaPedidos.desapilar();
-    ColaA.eliminar();
-    ColaB.eliminar();
-    ColaC.eliminar();
-    ColaD.eliminar();
+    borraPedidosColas();
 }
 Gestor::~Gestor()
 {
