@@ -140,6 +140,11 @@ void Gestor::muestraPedidosUrgentes(){
     ListaUrgente.mostrar();
 }
 
+void Gestor::buscarPedidos(){
+    ListaUrgente.mostrarMenor();
+    ListaEstandar.mostrarMayor();
+}
+
 void Gestor:: reiniciar()
 {
     pilaPedidos.desapilar();
