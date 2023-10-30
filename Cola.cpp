@@ -54,10 +54,10 @@ Pedido Cola::extraer()
 {
     pnodoCola nodo;
     Pedido pedido;
-    if(!ultimo)
+    if(!primero)
         return pedido;
-    nodo = ultimo;
-    ultimo = nodo->siguiente;
+    nodo = primero;
+    primero = nodo->siguiente;
     pedido = nodo->valor;
     longitud--;
     delete nodo;
