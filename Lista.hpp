@@ -14,10 +14,10 @@ public:
     int extraer();
     void mostrar();
     int getLongitud();
+
 private:
-    pnodoLista ultimo;
+    pnodoLista primero, ultimo;
     int longitud;
-    pnodoLista primero;
     int posicion;
 };
 
