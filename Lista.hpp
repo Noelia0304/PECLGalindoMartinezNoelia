@@ -12,6 +12,8 @@ public:
     ~Lista();
     void insertar(Pedido pedido);
     void mostrar();
+    void mostrarMenor();
+    void mostrarMayor()
     int getLongitud();
 
 private:
