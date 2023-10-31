@@ -157,6 +157,7 @@ void Gestor:: reiniciar()
     ListaUrgente.eliminar();
     ListaEstandar.eliminar();
 }
+
 Gestor::~Gestor()
 {
 }
