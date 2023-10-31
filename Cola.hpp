@@ -5,7 +5,7 @@
 class Cola
 {
 public:
-    Cola();clTabCtrl
+    Cola();
     ~Cola();
 
     void insertar(Pedido pedido);
