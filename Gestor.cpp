@@ -141,8 +141,13 @@ void Gestor::muestraPedidosUrgentes(){
 }
 
 void Gestor::buscarPedidos(){
-    ListaUrgente.mostrarMenor();
-    ListaEstandar.mostrarMayor();
+    Pedido pedidoMe = ListaUrgente.mostrarMenor();
+    Pedido pedidoMa = ListaEstandar.mostrarMayor();
+    
+    cout << "Los pedidos mayor y menor son: " << endl;
+    pedidoMe.mostrar();
+    pedidoMa.mostrar();
+    cout << endl;
 }
 
 void Gestor:: reiniciar()
