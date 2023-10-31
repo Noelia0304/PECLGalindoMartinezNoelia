@@ -149,6 +149,8 @@ void Gestor:: reiniciar()
 {
     pilaPedidos.desapilar();
     borraPedidosColas();
+    ListaUrgente.eliminar();
+    ListaEstandar.eliminar();
 }
 Gestor::~Gestor()
 {
