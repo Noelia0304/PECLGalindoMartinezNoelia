@@ -70,13 +70,12 @@ Pedido Lista::getMayor()
 
 void Lista::eliminar()
 {
-    pnodoLista aux;
-    while (ultimo){
-    aux = ultimo;
-    ultimo = ultimo->siguiente;
-    delete aux;
-    longitud--;
+    while (ultimo) {
+        pnodoLista aux = ultimo;
+        ultimo = ultimo->siguiente;
+        delete aux;
     }
+    longitud = 0;
 }
 
 Lista::~Lista()
