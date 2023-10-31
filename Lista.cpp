@@ -47,16 +47,21 @@ int Lista::getLongitud()
     return this->longitud;
 }
 
-Pedido Lista::mostrarMenor()
+Pedido Lista::mostrarMenor() 
 {
     pnodoLista aux = primero;
-    ultimo = primero;
-    while(ultimo->siguiente != NULL){
-        aux->siguiente = ultimo;
-        aux = ultimo;
+    Pedido menor = aux->valor;
+
+    while (aux != nullptr) {
+        if (aux->valor.ID > menor.ID) {
+            menor = aux->valor;
+        }
+        aux = aux->siguiente;
     }
-    return ultimo->valor;
+
+    return menor;
 }
+
 
 Pedido Lista::mostrarMayor()
 {
@@ -65,10 +70,11 @@ Pedido Lista::mostrarMayor()
 
 void Lista::eliminar()
 {
+    pnodoLista aux;
     while (ultimo){
-    pnodoLista nodo = ultimo;
+    aux = ultimo;
     ultimo = ultimo->siguiente;
-    delete nodo;
+    delete aux;
     longitud--;
     }
 }
