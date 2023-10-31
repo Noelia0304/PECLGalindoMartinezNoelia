@@ -52,9 +52,9 @@ Pedido Lista::mostrarMenor()
     return primero->valor;
 }
 
-void Lista::mostrarMenor()
+Pedido Lista::mostrarMayor()
 {
-    
+    return ultimo->valor;
 }
 
 Lista::~Lista()
