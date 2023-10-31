@@ -47,7 +47,7 @@ int Lista::getLongitud()
     return this->longitud;
 }
 
-Pedido Lista::mostrarMenor() 
+Pedido Lista::getMenor() 
 {
     pnodoLista aux = primero;
     Pedido menor = aux->valor;
@@ -63,7 +63,7 @@ Pedido Lista::mostrarMenor()
 }
 
 
-Pedido Lista::mostrarMayor()
+Pedido Lista::getMayor()
 {
     return primero->valor;
 }
