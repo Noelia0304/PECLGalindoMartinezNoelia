@@ -31,6 +31,7 @@ public:
     void muestraPedidosUrgentes();
     void buscarPedidos();
     void reiniciar();
+
 private:
     Pila pilaPedidos;
     Cola ColaA;
