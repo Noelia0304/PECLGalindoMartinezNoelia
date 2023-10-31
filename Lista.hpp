@@ -14,7 +14,7 @@ public:
     void mostrar();
     Pedido mostrarMenor();
     Pedido mostrarMayor();
-    Pedido eliminar();
+    void eliminar();
     int getLongitud();
 
 private:
