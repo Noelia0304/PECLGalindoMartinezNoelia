@@ -3,7 +3,6 @@
 Lista::Lista()
 {
     primero = NULL;
-    ultimo = NULL;
     longitud = 0;
 }
 
