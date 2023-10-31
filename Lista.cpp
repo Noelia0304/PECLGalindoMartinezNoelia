@@ -57,6 +57,17 @@ Pedido Lista::mostrarMayor()
     return ultimo->valor;
 }
 
+Pedido Lista::eliminar()
+{
+    while (ultimo){
+    pnodoLista nodo = ultimo;
+    ultimo = ultimo->siguiente;
+    delete nodo;
+    longitud--;
+    }
+
+}
+
 Lista::~Lista()
 {
 }
