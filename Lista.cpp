@@ -54,6 +54,11 @@ Pedido Lista::mostrarMenor()
 
 Pedido Lista::mostrarMayor()
 {
+    pnodoLista aux = primero;
+    while(aux->siguiente != NULL){
+        primero->siguiente = aux;
+        primero = aux;
+    }
     return ultimo->valor;
 }
 
@@ -65,6 +70,7 @@ Pedido Lista::eliminar()
     delete nodo;
     longitud--;
     }
+    return pedido
 }
 Lista::~Lista()
 {
