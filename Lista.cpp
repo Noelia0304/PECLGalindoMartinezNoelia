@@ -50,9 +50,10 @@ int Lista::getLongitud()
 Pedido Lista::mostrarMenor()
 {
     pnodoLista aux = primero;
-    while(aux->siguiente != NULL){
-        primero->siguiente = aux;
-        primero = aux;
+    ultimo = primero;
+    while(ultimo->siguiente != NULL){
+        aux->siguiente = ultimo;
+        aux = ultimo;
     }
     return ultimo->valor;
 }
