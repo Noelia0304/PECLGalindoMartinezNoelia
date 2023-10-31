@@ -13,7 +13,7 @@ public:
     void insertar(Pedido pedido);
     void mostrar();
     void mostrarMenor();
-    void mostrarMayor()
+    void mostrarMayor();
     int getLongitud();
 
 private:
