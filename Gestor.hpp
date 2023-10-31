@@ -29,6 +29,7 @@ public:
     int PedidosEnListaEstandar();
     void muestraPedidosEstandar();
     void muestraPedidosUrgentes();
+    void buscarPedidos();
     void reiniciar();
 private:
     Pila pilaPedidos;
