@@ -65,9 +65,7 @@ Pedido Lista::eliminar()
     delete nodo;
     longitud--;
     }
-
 }
-
 Lista::~Lista()
 {
 }
