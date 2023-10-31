@@ -29,7 +29,7 @@ void Lista::insertar(Pedido pedido)
 void Lista::mostrar()
 {
     pnodoLista aux = primero;
-    if(aux->valor.urgente == 1){
+    if(aux->valor.esUrgente() == 1){
         cout << "\t" << setw(10) << "El contenido de la lista Urgente es: " << endl;
     }else{
         cout << "\t" << setw(10) << "El contenido de la lista Estandar es: " << endl;
@@ -47,9 +47,9 @@ int Lista::getLongitud()
     return this->longitud;
 }
 
-void Lista::mostrarMenor()
+Pedido Lista::mostrarMenor()
 {
-    
+    return primero->valor;
 }
 
 void Lista::mostrarMenor()
