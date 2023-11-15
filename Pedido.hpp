@@ -14,6 +14,8 @@ public:
     void mostrar();
     int getId();
     void setId(int ID);
+    int getNSeguimiento();
+    void setNSeguimiento(int nSeguimiento);
     ~Pedido(); 
     
 private: 
