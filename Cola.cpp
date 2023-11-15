@@ -7,6 +7,7 @@ Cola::Cola()
     primero = NULL;
     ultimo = NULL;
     longitud = 0;
+   
 }
 
 void Cola::insertar(Pedido pedido)
@@ -73,15 +74,15 @@ int Cola::getLongitud()
     return this->longitud;
 }
 
-void Pedido::generarID(){
+void Cola::generarID(){
     Pedido pedido;
-    if(pedido.esUrgente){
-        ID = (rand() % 51) + 49;
+    if(pedido.esUrgente()){
+        pedido.ID = (rand() % 51) + 49;
     } else{
-        ID = (rand() % 50) + 1;
+        pedido.getId() = (rand() % 50) + 1;
     } 
-    if pedido.getId == pedido.generarID{
-        ID = pedido.generarID;
+    if (pedido.ID == pedido.generarID()){
+        pedido.ID = pedido.generarID();
     }
 }
 
