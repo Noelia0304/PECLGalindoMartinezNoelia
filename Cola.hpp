@@ -1,7 +1,6 @@
 #ifndef COLA_HPP
 #define COLA_HPP
 #include "NodoCola.hpp"
-#include "Pedido.hpp"
 #include <iomanip>
 class Cola
 {
