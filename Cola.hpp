@@ -2,6 +2,7 @@
 #define COLA_HPP
 #include "NodoCola.hpp"
 #include "Pedido.hpp"
+#include <iomanip>
 class Cola
 {
 public:
