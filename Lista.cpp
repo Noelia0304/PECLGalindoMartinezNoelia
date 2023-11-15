@@ -11,18 +11,31 @@ void Lista::insertar(Pedido pedido)
     pnodoLista nuevo;
     nuevo = new NodoLista(pedido);
     
-    if(!primero || pedido.ID < primero->valor.ID){
+    if(!primero || pedido.getId() < primero->valor.getId()){
         nuevo->siguiente = primero;
         primero = nuevo;
-    }else{
+    }
+    else{
         pnodoLista actual = primero;
-        while (actual->siguiente != NULL && pedido.ID >= actual->siguiente->valor.ID){
+        while (actual->siguiente != NULL && pedido.getId() >= actual->siguiente->valor.getId()){
             actual = actual->siguiente;
         }
         nuevo->siguiente = actual->siguiente;
         actual->siguiente = nuevo;
     }
     longitud++;
+}
+
+int Lista::generarNSeguimiento(Pedido pedido){
+    int nSeguimiento;
+    if(pedido.esUrgente()){
+        nSeguimiento = (rand() % 501) + 499;
+        pedido.setNSeguimiento(nSeguimiento);
+    } else{
+        nSeguimiento = (rand() % 499) + 1;
+        pedido.setNSeguimiento(nSeguimiento);
+    }
+    return nSeguimiento;
 }
 
 void Lista::mostrar()
@@ -52,7 +65,7 @@ Pedido Lista::getMenor()
     Pedido menor = aux->valor;
 
     while (aux != nullptr) {
-        if (aux->valor.ID > menor.ID) {
+        if (aux->valor.getId() > menor.getId()) {
             menor = aux->valor;
         }
         aux = aux->siguiente;
