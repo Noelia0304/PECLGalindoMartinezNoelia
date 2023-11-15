@@ -16,6 +16,10 @@ int Pedido::getId()
 {
     return this-> ID;
 }
+void Pedido:: setId(int ID)
+{
+    this->ID = ID;
+}
 
 void Pedido::generarNSeguimiento(){
     if(urgente){
