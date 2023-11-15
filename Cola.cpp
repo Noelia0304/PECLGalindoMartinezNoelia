@@ -29,7 +29,7 @@ void Cola::mostrar()
     pnodoCola aux = primero;
     cout << "\t" << setw(10) <<"El contenido de la cola es: " << endl;
     while(aux){
-        aux-> valor.mostrar();
+        aux-> valor.mostrar();cout << " con ID " << valor.getId() << endl;
         aux = aux->siguiente;
     }
     cout << endl;
@@ -78,14 +78,15 @@ int Cola::generarID(Pedido pedido){
     int ID;
     if(pedido.esUrgente()){
         ID = (rand() % 51) + 49;
-        pedido.setId(ID) ;
+        pedido.setId(ID);
     } else{
         ID = (rand() % 50) + 1;
-        pedido.setId(ID) ;
+        pedido.setId(ID);
     } 
     while (pedido.getId() == generarID(pedido)){
         pedido.setId(generarID(pedido));
     }
+    return ID;
 }
 
 Cola::~Cola()
