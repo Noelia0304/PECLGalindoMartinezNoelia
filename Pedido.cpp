@@ -13,12 +13,9 @@ bool Pedido::esUrgente()
     return this->urgente; // 1: urgente.0: estándar
 }
 
-void Pedido::generarID(){
-    if(urgente){
-        ID = (rand() % 51) + 49;
-    } else{
-        ID = (rand() % 50) + 1;
-    } 
+int Pedido::getId()
+{
+    return this-> ID;
 }
 
 void Pedido::generarNSeguimiento(){
