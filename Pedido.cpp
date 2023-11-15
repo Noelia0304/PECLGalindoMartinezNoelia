@@ -4,7 +4,6 @@ Pedido::Pedido()
 {
     this->urgente = (rand() % 2);
     this ->generarDNI();
-    this ->generarID();
     this ->generarNSeguimiento();
     
 }
