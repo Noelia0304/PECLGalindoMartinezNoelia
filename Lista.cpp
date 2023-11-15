@@ -4,7 +4,6 @@ Lista::Lista()
 {
     primero = NULL;
     longitud = 0;
-    this ->generarNSeguimiento;
 }
 
 void Lista::insertar(Pedido pedido)
