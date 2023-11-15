@@ -13,6 +13,7 @@ public:
     void generarDNI();
     void mostrar();
     int getId();
+    void setId(int ID);
     ~Pedido(); 
     
 private: 
