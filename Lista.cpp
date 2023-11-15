@@ -4,6 +4,7 @@ Lista::Lista()
 {
     primero = NULL;
     longitud = 0;
+    this ->generarNSeguimiento;
 }
 
 void Lista::insertar(Pedido pedido)
@@ -26,7 +27,7 @@ void Lista::insertar(Pedido pedido)
     longitud++;
 }
 
-int Lista::generarNSeguimiento(Pedido pedido){
+void Lista::generarNSeguimiento(Pedido pedido){
     int nSeguimiento;
     if(pedido.esUrgente()){
         nSeguimiento = (rand() % 501) + 499;
@@ -35,7 +36,7 @@ int Lista::generarNSeguimiento(Pedido pedido){
         nSeguimiento = (rand() % 499) + 1;
         pedido.setNSeguimiento(nSeguimiento);
     }
-    return nSeguimiento;
+    
 }
 
 void Lista::mostrar()
