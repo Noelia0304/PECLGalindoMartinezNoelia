@@ -1,7 +1,6 @@
 #ifndef PILA_HPP
 #define PILA_HPP
 #include "NodoPila.hpp"
-#include "Pedido.hpp"
 
 class Pila
 {
