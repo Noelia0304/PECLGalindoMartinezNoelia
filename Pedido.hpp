@@ -12,6 +12,7 @@ public:
     void generarNSeguimiento();
     void generarDNI();
     void mostrar();
+    int getId();
     ~Pedido(); 
     
 private: 
