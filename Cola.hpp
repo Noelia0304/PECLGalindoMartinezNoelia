@@ -14,7 +14,7 @@ public:
     void mostrar();
     Pedido verPrimero();
     int getLongitud();
-    int generarID(Pedido pedido);
+    void generarID(Pedido pedido);
     
 private:
     pnodoCola primero, ultimo;
