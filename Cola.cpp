@@ -29,7 +29,8 @@ void Cola::mostrar()
     pnodoCola aux = primero;
     cout << "\t" << setw(10) <<"El contenido de la cola es: " << endl;
     while(aux){
-        aux-> valor.mostrar();cout << " con ID " << valor.getId() << endl;
+        aux-> valor.mostrar();
+        cout << " con ID " << valor.getId() << endl;
         aux = aux->siguiente;
     }
     cout << endl;
