@@ -9,19 +9,16 @@ class Pedido
 public:
     Pedido();
     bool esUrgente();
-    void generarID();
     void generarNSeguimiento();
     void generarDNI();
     void mostrar();
-    int ID;
-    
     ~Pedido(); 
     
 private: 
     char DNI[10] ;
     bool urgente;
     int nSeguimiento;
-    
+    int ID;
 };
 
 #endif // PEDIDO_HPP
