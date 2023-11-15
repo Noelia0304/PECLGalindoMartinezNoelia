@@ -16,6 +16,7 @@ public:
     Pedido getMayor();
     void eliminar();
     int getLongitud();
+    int generarNSeguimiento(Pedido pedido);
 
 private:
     pnodoLista primero, ultimo;
