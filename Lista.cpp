@@ -26,17 +26,6 @@ void Lista::insertar(Pedido pedido)
     longitud++;
 }
 
-void Lista::generarNSeguimiento(Pedido pedido){
-    int nSeguimiento;
-    if(pedido.esUrgente()){
-        nSeguimiento = (rand() % 501) + 499;
-        pedido.setNSeguimiento(nSeguimiento);
-    } else{
-        nSeguimiento = (rand() % 499) + 1;
-        pedido.setNSeguimiento(nSeguimiento);
-    }
-    
-}
 
 void Lista::mostrar()
 {
