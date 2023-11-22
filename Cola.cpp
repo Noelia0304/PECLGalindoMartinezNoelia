@@ -74,17 +74,6 @@ int Cola::getLongitud()
     return this->longitud;
 }
 
-void Cola::generarID(Pedido pedido){
-    
-    if(pedido.esUrgente()){
-        pedido.setId(((rand() % 51) + 49));
-    } else{
-        pedido.setId(((rand() % 50) + 1));
-    } 
-    /*while (pedido.getId() == generarID(pedido)){
-        pedido.setId(generarID(pedido));
-    }*/
-}
 
 Cola::~Cola()
 {
