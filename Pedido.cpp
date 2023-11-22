@@ -21,14 +21,14 @@ void Pedido:: setId(int ID)
     this->ID = ID;
 }
 
-int Pedido::getNSeguimiento()
+int Pedido::getNumSeg()
 {
-    return this-> nSeguimiento;
+    return this-> numSeg;
 }
 
-void Pedido:: setNSeguimiento(int nSeguimiento)
+void Pedido:: setNumSeg(int numSeg)
 {
-    this->nSeguimiento = nSeguimiento;
+    this->numSeg = numSeg;
 }
 
 void Pedido::generarDNI()
