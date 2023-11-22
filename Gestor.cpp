@@ -21,9 +21,9 @@ void Gestor::generar12Pedidos(){
 void Gestor::generarID(){
     Pedido pedido;
     if(pedido.esUrgente() == 1){
-        pedido.setId(((rand() % 51) + 49));  
+        pedido.setId((rand() % 51) + 49);  
     }else{
-        pedido.setId(((rand() % 50) + 1));
+        pedido.setId((rand() % 50) + 1);
     } 
 }
 
