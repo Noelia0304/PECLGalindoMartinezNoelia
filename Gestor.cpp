@@ -21,10 +21,10 @@ void Gestor::generar12Pedidos(){
 void Gestor::generarID(){
     Pedido pedido;
     if(pedido.esUrgente() == 1){
-        pedido.setId(((rand() % 51) + 49));
-    } else{
+        pedido.setId(((rand() % 51) + 49));  
+    }else{
         pedido.setId(((rand() % 50) + 1));
-    }
+    } 
 }
 
 void Gestor::generarNumSeg(){
@@ -34,7 +34,6 @@ void Gestor::generarNumSeg(){
     } else{
         pedido.setNumSeg((rand() % 499) + 1);
     }
-    
 }
 
 void Gestor::muestraPedidos()
@@ -52,7 +51,8 @@ void Gestor::encolarPedidos()
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
           pedido = pilaPedidos.extraer(); 
-          if(pedido.esUrgente() == 1){
+          if(pedido.esUrgente() == 1 && pedido.getID() == 0) {
+              pedido.setID(generarID());
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
                     ColaD.insertar(pedido);
                 }else{
@@ -65,7 +65,7 @@ void Gestor::encolarPedidos()
                     ColaA.insertar(pedido);
                 }   
             }
-        }
+    }
 }
 
 int Gestor::PedidosEnSalaA(){
