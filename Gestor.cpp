@@ -51,8 +51,7 @@ void Gestor::encolarPedidos()
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
           pedido = pilaPedidos.extraer(); 
-          if(pedido.esUrgente() == 1 && pedido.getID() == 0) {
-              pedido.setID(generarID());
+          if(pedido.esUrgente() == 1) {
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
                     ColaD.insertar(pedido);
                 }else{
