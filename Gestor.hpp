@@ -16,6 +16,8 @@ public:
     void generar12Pedidos();
     void muestraPedidos();
     void borraPedidosPila();
+    void generarID();
+    void generarNumSeg();
     void encolarPedidos();
     int PedidosEnSalaA();
     int PedidosEnSalaB();
