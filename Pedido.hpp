@@ -9,19 +9,18 @@ class Pedido
 public:
     Pedido();
     bool esUrgente();
-    void generarNSeguimiento();
     void generarDNI();
     void mostrar();
     int getId();
     void setId(int ID);
-    int getNSeguimiento();
-    void setNSeguimiento(int nSeguimiento);
+    int getNumSeg();
+    void setNumSeg(int numSeg);
     ~Pedido(); 
     
 private: 
     char DNI[10] ;
     bool urgente;
-    int nSeguimiento;
+    int numSeg;
     int ID;
 };
 
