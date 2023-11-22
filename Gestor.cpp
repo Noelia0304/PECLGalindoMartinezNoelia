@@ -18,6 +18,25 @@ void Gestor::generar12Pedidos(){
     }
 }
 
+void Gestor::generarID(){
+    Pedido pedido;
+    if(pedido.esUrgente() == 1){
+        pedido.setId(((rand() % 51) + 49));
+    } else{
+        pedido.setId(((rand() % 50) + 1));
+    }
+}
+
+void Gestor::generarNumSeg(){
+    Pedido pedido;
+    if(pedido.esUrgente() == 1){
+        pedido.setNumSeg((rand() % 501) + 499);
+    } else{
+        pedido.setNumSeg((rand() % 499) + 1);
+    }
+    
+}
+
 void Gestor::muestraPedidos()
 {
      pilaPedidos.mostrar();
@@ -30,7 +49,6 @@ void Gestor::borraPedidosPila()
 
 void Gestor::encolarPedidos()
 {
-    
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
           pedido = pilaPedidos.extraer(); 
