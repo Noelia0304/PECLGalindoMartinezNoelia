@@ -5,6 +5,7 @@ Gestor::Gestor()
 {
     
 }
+
 int Gestor::PedidosEnPila(){
    return pilaPedidos.getLongitud();
 }
@@ -18,7 +19,8 @@ void Gestor::generar12Pedidos(){
     }
 }
 
-void Gestor::generarID(){
+void Gestor::generarID()
+{
     Pedido pedido;
     if(pedido.esUrgente() == 1){
         pedido.setId((rand() % 51) + 49);  
@@ -27,7 +29,8 @@ void Gestor::generarID(){
     } 
 }
 
-void Gestor::generarNumSeg(){
+void Gestor::generarNumSeg()
+{
     Pedido pedido;
     if(pedido.esUrgente() == 1){
         pedido.setNumSeg((rand() % 501) + 499);
