@@ -3,7 +3,8 @@
 
 Gestor::Gestor()
 {
-    
+ tamanoArrayNumSeg = 0;
+ tamanoArrayId = 0;
 }
 
 int Gestor::PedidosEnPila(){
@@ -19,11 +20,12 @@ void Gestor::generar12Pedidos(){
     }
 }
 
-int Gestor::generarId(Pedido pedido){
+int Gestor::generarId(Pedido pedido)
+{
     int idN;
     bool existe;
     do {
-        if(pedido.esUrgenteP()){
+        if(pedido.esUrgente()){
             idN = rand() % 49 + 51;
         } else {
             idN = rand() % 49 + 1;
@@ -49,7 +51,7 @@ int Gestor::generarNumSeg(Pedido pedido){
     int NumSegS;
     bool existe;
     do {
-        if(pedido.esUrgenteP()){
+        if(pedido.esUrgente()){
             NumSegS = rand() % 499 + 501;
         } else {
             NumSegS = rand() % 499 + 1;
@@ -86,6 +88,8 @@ void Gestor::encolarPedidos()
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
           pedido = pilaPedidos.extraer();
+          int id = generarId(pedido);
+          pedido.setId(id);
           if(pedido.esUrgente() == 1) {
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
                     ColaD.insertar(pedido);
