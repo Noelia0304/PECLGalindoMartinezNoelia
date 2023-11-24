@@ -1,5 +1,5 @@
 #include "Gestor.hpp"
-
+#include <cstdlib>
 
 Gestor::Gestor()
 {
@@ -19,7 +19,7 @@ void Gestor::generar12Pedidos(){
     }
 }
 
-int Gestor::generarID()
+void Gestor::generarID()
 {
     Pedido pedido;
     if(pedido.esUrgente() == 1){
@@ -53,18 +53,27 @@ void Gestor::encolarPedidos()
 {
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
+          int id;
           pedido = pilaPedidos.extraer();
-          pedido.setId(generarID());
+          
           if(pedido.esUrgente() == 1) {
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
+                    id = generarID();
+                    pedido.setId(id);
                     ColaD.insertar(pedido);
                 }else{
+                    id = generarID();
+                    pedido.setId(id);
                     ColaC.insertar(pedido);
                 }
             }else{
                 if(ColaA.getLongitud() >= ColaB.getLongitud()){
+                    id = generarID();
+                    pedido.setId(id);
                     ColaB.insertar(pedido);
                 }else{
+                    id = generarID();
+                    pedido.setId(id);
                     ColaA.insertar(pedido);
                 }   
             }
