@@ -16,8 +16,8 @@ public:
     void generar12Pedidos();
     void muestraPedidos();
     void borraPedidosPila();
-    void generarID();
-    void generarNumSeg();
+    int generarId(Pedido pedido);
+    int generarNumSeg(Pedido pedido);
     void encolarPedidos();
     int PedidosEnSalaA();
     int PedidosEnSalaB();
@@ -42,6 +42,10 @@ private:
     Cola ColaD;
     Lista ListaEstandar;
     Lista ListaUrgente;
+    int arrayId[48];
+    int arrayNumSeg[48];
+    int tamanoArrayId;
+    int tamanoArrayNumSeg;
 };
 
 #endif // GESTOR_HPP
