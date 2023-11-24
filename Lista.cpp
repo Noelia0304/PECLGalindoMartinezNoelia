@@ -24,6 +24,11 @@ void Lista::insertar(Pedido pedido)
         nuevo->siguiente = actual->siguiente;
         actual->siguiente = nuevo;
     }
+    pnodoLista ultimo = primero;
+    while(ultimo -> siguiente){
+        ultimo = ultimo -> siguiente;
+    }
+    ultimo -> siguiente = nullptr;
     longitud++;
 }
 
@@ -51,17 +56,12 @@ int Lista::getLongitud()
 
 Pedido Lista::getMenor() 
 {
-    pnodoLista aux = primero;
-    Pedido menor = aux->valor;
-
-    while (aux != nullptr) {
-        if (aux->valor.getId() > menor.getId()) {
-            menor = aux->valor;
-        }
-        aux = aux->siguiente;
+    pnodoLista actual = primero;
+    while(actual){
+        ultimo = actual;
+        actual = actual -> siguiente;
     }
-
-    return menor;
+    return ultimo ->valor;
 }
 
 
