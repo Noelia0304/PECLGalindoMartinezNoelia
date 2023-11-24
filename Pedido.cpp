@@ -5,7 +5,7 @@ Pedido::Pedido()
     this->urgente = (rand() % 2);
     this ->generarDNI();
     this -> ID = 0;
-    this -> NumSeg = 0; 
+    this -> numSeg = 0; 
 }
 bool Pedido::esUrgente()
 {
