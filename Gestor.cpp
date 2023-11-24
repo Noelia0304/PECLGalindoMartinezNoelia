@@ -19,7 +19,7 @@ void Gestor::generar12Pedidos(){
     }
 }
 
-void Gestor::generarID()
+int Gestor::generarID()
 {
     Pedido pedido;
     if(pedido.esUrgente() == 1){
@@ -53,7 +53,8 @@ void Gestor::encolarPedidos()
 {
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
-          pedido = pilaPedidos.extraer(); 
+          pedido = pilaPedidos.extraer();
+          pedido.setId(generarID());
           if(pedido.esUrgente() == 1) {
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
                     ColaD.insertar(pedido);
