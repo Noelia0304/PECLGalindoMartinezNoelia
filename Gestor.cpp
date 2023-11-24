@@ -1,5 +1,5 @@
 #include "Gestor.hpp"
-#include <cstdlib>
+
 
 Gestor::Gestor()
 {
@@ -19,24 +19,56 @@ void Gestor::generar12Pedidos(){
     }
 }
 
-void Gestor::generarID()
-{
-    Pedido pedido;
-    if(pedido.esUrgente() == 1){
-        pedido.setId((rand() % 51) + 49);  
-    }else{
-        pedido.setId((rand() % 50) + 1);
-    } 
+int Gestor::generarId(Pedido pedido){
+    int idN;
+    bool existe;
+    do {
+        if(pedido.esUrgenteP()){
+            idN = rand() % 49 + 51;
+        } else {
+            idN = rand() % 49 + 1;
+        }
+        existe = false;
+        for(int i = 0; i < tamanoArrayId; i++){
+            if(arrayId[i] == idN){
+                existe = true;
+                break;
+            }
+        }
+
+    } while(existe);
+    if(tamanoArrayId<48){
+        arrayId[tamanoArrayId] = idN;
+        tamanoArrayId++;
+    }
+    return idN;
+
 }
 
-void Gestor::generarNumSeg()
-{
-    Pedido pedido;
-    if(pedido.esUrgente() == 1){
-        pedido.setNumSeg((rand() % 501) + 499);
-    } else{
-        pedido.setNumSeg((rand() % 499) + 1);
-    }
+int Gestor::generarNumSeg(Pedido pedido){
+    int NumSegS;
+    bool existe;
+    do {
+        if(pedido.esUrgenteP()){
+            NumSegS = rand() % 499 + 501;
+        } else {
+            NumSegS = rand() % 499 + 1;
+        }
+        existe = false;
+        for(int i = 0; i < tamanoArrayNumSeg; i++){
+            if(arrayNumSeg[i] == NumSegS){
+                existe = true;
+                break;
+            }
+        }
+
+    } while(existe);
+    if(tamanoArrayNumSeg<48){
+        arrayNumSeg[tamanoArrayNumSeg] = NumSegS;
+        tamanoArrayNumSeg++;
+    } 
+    return NumSegS;
+
 }
 
 void Gestor::muestraPedidos()
@@ -53,27 +85,17 @@ void Gestor::encolarPedidos()
 {
     while(pilaPedidos.getLongitud()!=0){
           Pedido pedido;
-          int id;
           pedido = pilaPedidos.extraer();
-          
           if(pedido.esUrgente() == 1) {
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
-                    id = generarID();
-                    pedido.setId(id);
                     ColaD.insertar(pedido);
                 }else{
-                    id = generarID();
-                    pedido.setId(id);
                     ColaC.insertar(pedido);
                 }
             }else{
                 if(ColaA.getLongitud() >= ColaB.getLongitud()){
-                    id = generarID();
-                    pedido.setId(id);
                     ColaB.insertar(pedido);
                 }else{
-                    id = generarID();
-                    pedido.setId(id);
                     ColaA.insertar(pedido);
                 }   
             }
