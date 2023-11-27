@@ -68,7 +68,6 @@ int Gestor::generarNumSeg(Pedido pedido){
         tamanoArrayNumSeg++;
     } 
     return NumSegS;
-
 }
 
 void Gestor::muestraPedidos()
@@ -167,29 +166,26 @@ void Gestor:: borraPedidosColas()
 
 void Gestor::enlistarPedidos()
 {
-    Pedido pedido; 
+    Pedido pedido;
+    int numSeg = generarNumSeg(pedido);
     while(ColaA.getLongitud() !=0){
-        int numSeg = generarNumSeg(pedido);
-        pedido.setNumSeg(numSeg);
         pedido = ColaA.extraer();
+        pedido.setNumSeg(numSeg);
         ListaEstandar.insertar(pedido);
     }
     while(ColaB.getLongitud()!=0){
-        int numSeg = generarNumSeg(pedido);
-        pedido.setNumSeg(numSeg);
         pedido = ColaB.extraer();
+        pedido.setNumSeg(numSeg);
         ListaEstandar.insertar(pedido);
     }
     while(ColaC.getLongitud()!=0){
-        int numSeg = generarNumSeg(pedido);
-        pedido.setNumSeg(numSeg);
         pedido = ColaC.extraer();
+        pedido.setNumSeg(numSeg);
         ListaUrgente.insertar(pedido);
     }
     while(ColaD.getLongitud()!=0){
-        int numSeg = generarNumSeg(pedido);
-        pedido.setNumSeg(numSeg);
         pedido = ColaD.extraer();
+        pedido.setNumSeg(numSeg);
         ListaUrgente.insertar(pedido);
     }
 }
