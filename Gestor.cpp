@@ -167,24 +167,27 @@ void Gestor:: borraPedidosColas()
 void Gestor::enlistarPedidos()
 {
     Pedido pedido;
-    int numSeg = generarNumSeg(pedido);
     while(ColaA.getLongitud() !=0){
         pedido = ColaA.extraer();
+        int numSeg = generarNumSeg(pedido);
         pedido.setNumSeg(numSeg);
         ListaEstandar.insertar(pedido);
     }
     while(ColaB.getLongitud()!=0){
         pedido = ColaB.extraer();
+        int numSeg = generarNumSeg(pedido);
         pedido.setNumSeg(numSeg);
         ListaEstandar.insertar(pedido);
     }
     while(ColaC.getLongitud()!=0){
         pedido = ColaC.extraer();
+        int numSeg = generarNumSeg(pedido);
         pedido.setNumSeg(numSeg);
         ListaUrgente.insertar(pedido);
     }
     while(ColaD.getLongitud()!=0){
         pedido = ColaD.extraer();
+        int numSeg = generarNumSeg(pedido);
         pedido.setNumSeg(numSeg);
         ListaUrgente.insertar(pedido);
     }
