@@ -35,8 +35,7 @@ int main(int argc, char** argv)
         cout << "\tI. Mostrar los Pedidos que hay en la lista Estandar.\n";
         cout << "\tJ. Mostrar los Pedidos que hay en la lista Urgentes.\n";
         cout << "\tK. Buscar en las listas el Pedido Estandar de mayor prioridad y "
-                "el pedido Urgente con menor prioridad "
-                "prioridad.\n";
+                "el pedido Urgente con menor prioridad .\n";
         cout << "\tL. Reiniciar el programa.\n";
         cout << "\tM. Crear y dibujar el ABB en consola.\n";
         cout << "\tN. Mostrar los datos de todos los Pedidos Estandar ordenados "
