@@ -29,7 +29,6 @@ void Cola::mostrar()
     cout << "\t" << setw(10) <<"El contenido de la cola es: " << endl;
     while(aux){
         aux-> valor.mostrar();
-        cout << " con ID " << valor.getId();
         aux = aux->siguiente;
     }
     cout << endl;
