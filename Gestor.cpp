@@ -37,7 +37,6 @@ int Gestor::generarId(Pedido pedido)
                 break;
             }
         }
-
     } while(existe);
     if(tamanoArrayId<48){
         arrayId[tamanoArrayId] = idN;
@@ -63,7 +62,6 @@ int Gestor::generarNumSeg(Pedido pedido){
                 break;
             }
         }
-
     } while(existe);
     if(tamanoArrayNumSeg<48){
         arrayNumSeg[tamanoArrayNumSeg] = NumSegS;
@@ -156,25 +154,41 @@ void Gestor:: borraPedidosColas()
     while(ColaD.getLongitud()!=0){
         ColaD.eliminar();
     }
-        
+    for(int i = 0; i < tamanoArrayId; i++){
+        arrayId[i] = 0;
+    }
+    for(int i = 0; i < tamanoArrayNumSeg; i++){
+        arrayNumSeg[i] = 0;
+    }
+    
+    tamanoArrayId = 0;
+    tamanoArrayNumSeg = 0;
 }
 
 void Gestor::enlistarPedidos()
 {
     Pedido pedido; 
     while(ColaA.getLongitud() !=0){
+        int numSeg = generarNumSeg(pedido);
+        pedido.setNumSeg(numSeg);
         pedido = ColaA.extraer();
         ListaEstandar.insertar(pedido);
     }
     while(ColaB.getLongitud()!=0){
+        int numSeg = generarNumSeg(pedido);
+        pedido.setNumSeg(numSeg);
         pedido = ColaB.extraer();
         ListaEstandar.insertar(pedido);
     }
     while(ColaC.getLongitud()!=0){
+        int numSeg = generarNumSeg(pedido);
+        pedido.setNumSeg(numSeg);
         pedido = ColaC.extraer();
         ListaUrgente.insertar(pedido);
     }
     while(ColaD.getLongitud()!=0){
+        int numSeg = generarNumSeg(pedido);
+        pedido.setNumSeg(numSeg);
         pedido = ColaD.extraer();
         ListaUrgente.insertar(pedido);
     }
@@ -196,7 +210,8 @@ void Gestor::muestraPedidosUrgentes(){
     ListaUrgente.mostrar();
 }
 
-void Gestor::buscarPedidos(){
+void Gestor::buscarPedidos()
+{
     Pedido pedidoMe = ListaUrgente.getMenor();
     Pedido pedidoMa = ListaEstandar.getMayor();
     
@@ -212,6 +227,16 @@ void Gestor:: reiniciar()
     borraPedidosColas();
     ListaUrgente.eliminar();
     ListaEstandar.eliminar();
+    
+    for(int i = 0; i < tamanoArrayId; i++){
+        arrayId[i] = 0;
+    }
+    for(int i = 0; i < tamanoArrayNumSeg; i++){
+        arrayNumSeg[i] = 0;
+    }
+    
+    tamanoArrayId = 0;
+    tamanoArrayNumSeg = 0;
 }
 
 Gestor::~Gestor()
