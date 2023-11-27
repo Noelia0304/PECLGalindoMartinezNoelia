@@ -1,6 +1,6 @@
 #include "NodoArbol.hpp"
 
-NodoArbol::NodoArbol(int dato)
+NodoArbol::NodoArbol(Pedido dato)
 {
     this->dato = dato;
     this->izq = nullptr;
