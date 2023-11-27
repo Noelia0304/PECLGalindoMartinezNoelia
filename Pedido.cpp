@@ -4,6 +4,8 @@ Pedido::Pedido()
 {
     this->urgente = (rand() % 2);
     this ->generarDNI();
+    this -> ID = 0;
+    this -> numSeg = 0;
 
 }
 bool Pedido::esUrgente()
@@ -16,9 +18,9 @@ int Pedido::getId()
     return this-> ID;
 }
 
-void Pedido:: setId(int ID)
+void Pedido:: setId(int numero)
 {
-    this->ID = ID;
+    this->ID = numero;
 }
 
 int Pedido::getNumSeg()
@@ -26,9 +28,9 @@ int Pedido::getNumSeg()
     return this-> numSeg;
 }
 
-void Pedido:: setNumSeg(int numSeg)
+void Pedido::setNumSeg(int numero)
 {
-    this->numSeg = numSeg;
+    this->numSeg = numero;
 }
 
 void Pedido::generarDNI()
@@ -48,9 +50,18 @@ void Pedido::generarDNI()
 void Pedido::mostrar()
 {
     string urgencia = "estandar";
-    if(urgente)
-        urgencia = "urgente";
-    cout << "\t" << setw(10) << DNI << " del tipo " << urgencia << endl;
+    if(urgente){
+       urgencia = "urgente"; 
+    }
+    if(!ID == 0){
+       cout << "\t" << setw(10) << DNI << " del tipo " << urgencia << " con ID " << ID <<endl; 
+    }else{ 
+        if(!numSeg == 0){
+        cout << "\t" << setw(10) << DNI << " del tipo " << urgencia << " con ID " << ID << " con numero de seguimiento " << numSeg << endl;
+        }else{
+        cout << "\t" << setw(10) << DNI << " del tipo " << urgencia << endl;
+        }
+    }    
 }
 
 Pedido::~Pedido()
