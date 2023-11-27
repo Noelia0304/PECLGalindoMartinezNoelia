@@ -12,9 +12,9 @@ public:
     void generarDNI();
     void mostrar();
     int getId();
-    void setId(int ID);
+    void setId(int);
     int getNumSeg();
-    void setNumSeg(int numSeg);
+    void setNumSeg(int);
     ~Pedido(); 
     
 private: 
