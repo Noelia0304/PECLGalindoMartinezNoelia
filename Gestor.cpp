@@ -87,8 +87,6 @@ void Gestor::encolarPedidos()
           pedido = pilaPedidos.extraer();
           int id = generarId(pedido);
           pedido.setId(id);
-          int numseg = generarNumSeg(pedido);
-          pedido.setNumSeg(numseg);
           if(pedido.esUrgente() == 1) {
                 if(ColaC.getLongitud() >= ColaD.getLongitud()){
                     ColaD.insertar(pedido);
@@ -171,18 +169,26 @@ void Gestor::enlistarPedidos()
     Pedido pedido;
     while(ColaA.getLongitud() !=0){
         pedido = ColaA.extraer();
+        int numseg = generarNumSeg(pedido);
+        pedido.setNumSeg(numseg);
         ListaEstandar.insertar(pedido);
     }
     while(ColaB.getLongitud()!=0){
         pedido = ColaB.extraer();
+        int numseg = generarNumSeg(pedido);
+        pedido.setNumSeg(numseg);
         ListaEstandar.insertar(pedido);
     }
     while(ColaC.getLongitud()!=0){
         pedido = ColaC.extraer();
+        int numseg = generarNumSeg(pedido);
+        pedido.setNumSeg(numseg);
         ListaUrgente.insertar(pedido);
     }
     while(ColaD.getLongitud()!=0){
         pedido = ColaD.extraer();
+        int numseg = generarNumSeg(pedido);
+        pedido.setNumSeg(numseg);
         ListaUrgente.insertar(pedido);
     }
 }
