@@ -42,6 +42,7 @@ private:
     Cola ColaD;
     Lista ListaEstandar;
     Lista ListaUrgente;
+    Arbol arbol;
     int arrayId[48];
     int arrayNumSeg[48];
     int tamanoArrayId;
