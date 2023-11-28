@@ -238,6 +238,9 @@ void Gestor:: reiniciar()
     tamanoArrayNumSeg = 0;
 }
 
+int Gestor::PedidosEnArbol(){
+    arbol.numNodos();
+}
 Gestor::~Gestor()
 {
 }
