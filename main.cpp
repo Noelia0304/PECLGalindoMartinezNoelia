@@ -101,28 +101,28 @@ int main(int argc, char** argv)
                 gestor.reiniciar();
             break;
         case 'M':
-            //...;
+            //gestor.dibujarAbb();
             break;
         case 'N':
-            //...;
+            //gestor.pedidosArbolE();
             break;
         case 'O':
-            //...;
+            //gestor.pedidosArbolU();
             break;
         case 'P':
-            //...;
+            //gestor.PedidosAbbInorden();
             break;
         case 'Q':
-            //...;
+            //gestor.buscarPedidosArbol();;
             break;
         case 'R':
-            //...;
+            //gestor.NumSegImpar();
             break;
         case 'T':
-            //...;
+            //gestor.PedidosNodoHoja();
             break;
         case 'U':
-            //...;
+            //gestor.eliminarPedido();
             break;
         case 'S':
             cout << "Saliendo del programa...\n";
