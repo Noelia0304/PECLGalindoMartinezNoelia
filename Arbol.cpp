@@ -1,12 +1,12 @@
 #include "Arbol.hpp"
 
 Arbol::Arbol() { raiz = nullptr; }
-void Arbol::insertar(int val) { raiz = insertar(raiz, val); }
-pnodoAbb Arbol::insertar(pnodoAbb nodo, int val)
+void Arbol::insertar(Pedido val) { raiz = insertar(raiz, val); }
+pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido val)
 {
     if(!nodo)
         return new NodoArbol(val);
-    if(val <= nodo->dato)
+    if(val.getNumSeg() <= nodo->dato.getNumSeg())
         nodo->izq = insertar(nodo->izq, val);
     else
         nodo->der = insertar(nodo->der, val);
@@ -22,7 +22,7 @@ void Arbol::pintar(pnodoAbb nodo)
     if(!nodo)
         return;
     pintar(nodo->izq);
-    cout << nodo->dato << " ";
+    cout << nodo->dato.getNumSeg() << " ";
     pintar(nodo->der);
 }
 int Arbol::altura(pnodoAbb nodo)
@@ -58,7 +58,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
 
     if(nodo->izq) {
         int numeroQueQuieroImprimirEnElArbol =
-            nodo->izq->dato; // En vez de este valor, tenéis que coger el número de la habitación del paciente.
+            nodo->izq->dato.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
         string izqdato = SP + to_string(numeroQueQuieroImprimirEnElArbol) + SP;
         dibujarNodo(output, linkAbove, nodo->izq, nivel + 1, p - izqdato.size(), 'L');
         p = max(p, (int)output[nivel + 1].size());
@@ -68,7 +68,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
     if(space > 0)
         output[nivel] += string(space, ' ');
     int numeroQueQuieroImprimirEnElArbol =
-        nodo->dato; // En vez de este valor, tenéis que coger el número de la habitación del paciente.
+        nodo->dato.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
     string nododato = SP + to_string(numeroQueQuieroImprimirEnElArbol) + SP;
     output[nivel] += nododato;
 
@@ -118,4 +118,7 @@ void Arbol::dibujar()
     cout << '\n' << '\n';
 }
 
+int Arbol::numNodos(){
+    
+}
 Arbol::~Arbol() {}
