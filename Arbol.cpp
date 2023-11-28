@@ -30,7 +30,7 @@ void Arbol::pintar(pnodoAbb nodo)
     if(!nodo)
         return;
     pintar(nodo->izq);
-    cout << nodo->dato.getNumSeg() << " ";
+    cout << nodo->pedido.getNumSeg() << " ";
     pintar(nodo->der);
 }
 
