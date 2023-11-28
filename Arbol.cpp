@@ -67,7 +67,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
 
     if(nodo->izq) {
         int numeroQueQuieroImprimirEnElArbol =
-            nodo->izq->dato.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
+            nodo->izq->pedido.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
         string izqdato = SP + to_string(numeroQueQuieroImprimirEnElArbol) + SP;
         dibujarNodo(output, linkAbove, nodo->izq, nivel + 1, p - izqdato.size(), 'L');
         p = max(p, (int)output[nivel + 1].size());
@@ -131,4 +131,8 @@ void Arbol::dibujar()
 int Arbol::numNodos(){
     
 }
+int Arbol::numNodos(){
+    
+}
+
 Arbol::~Arbol() {}
