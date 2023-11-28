@@ -5,11 +5,11 @@
 class NodoArbol
 {
 public:
-    NodoArbol(Pedido dato);
+    NodoArbol(Pedido pedido);
     ~NodoArbol();
 
 private:
-    Pedido dato; // Aquí se almacenan enteros pero en vuestra práctica se deben almacenar pacientes
+    Pedido pedido; // Aquí se almacenan enteros pero en vuestra práctica se deben almacenar pacientes
     NodoArbol* izq;
     NodoArbol* der;
 
