@@ -1,22 +1,30 @@
 #include "Arbol.hpp"
 
-Arbol::Arbol() { raiz = nullptr; }
-void Arbol::insertar(Pedido val) { raiz = insertar(raiz, val); }
-pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido val)
+Arbol::Arbol() { 
+    raiz = nullptr; 
+}
+
+void Arbol::insertar(Pedido pedido) { 
+    raiz = insertar(raiz, pedido); 
+}
+
+pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedido)
 {
     if(!nodo)
-        return new NodoArbol(val);
-    if(val.getNumSeg() <= nodo->dato.getNumSeg())
+        return new NodoArbol(pedido);
+    if(pedido.getNumSeg() <= nodo->dato.getNumSeg())
         nodo->izq = insertar(nodo->izq, val);
     else
         nodo->der = insertar(nodo->der, val);
     return nodo;
 }
+
 void Arbol::pintar()
 {
     pintar(raiz);
     cout << '\n';
 }
+
 void Arbol::pintar(pnodoAbb nodo)
 {
     if(!nodo)
@@ -25,6 +33,7 @@ void Arbol::pintar(pnodoAbb nodo)
     cout << nodo->dato.getNumSeg() << " ";
     pintar(nodo->der);
 }
+
 int Arbol::altura(pnodoAbb nodo)
 {
     if(!nodo)
@@ -80,6 +89,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
     if(nodo->der)
         dibujarNodo(output, linkAbove, nodo->der, nivel + 1, output[nivel].size(), 'R');
 }
+
 void Arbol::dibujar()
 {
     int h = altura(raiz);
