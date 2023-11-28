@@ -1,8 +1,8 @@
 #include "NodoArbol.hpp"
 
-NodoArbol::NodoArbol(Pedido dato)
+NodoArbol::NodoArbol(Pedido pedido)
 {
-    this->dato = dato;
+    this->pedido = pedido;
     this->izq = nullptr;
     this->der = nullptr;
 }
