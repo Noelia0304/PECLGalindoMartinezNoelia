@@ -10,7 +10,7 @@ class Arbol
 {
 public:
     Arbol();
-    void insertar(Pedido val);
+    void insertar(Pedido pedido);
     void pintar();
     void dibujar();
     ~Arbol();
