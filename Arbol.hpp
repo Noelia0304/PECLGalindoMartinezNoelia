@@ -10,14 +10,14 @@ class Arbol
 {
 public:
     Arbol();
-    void insertar(int val);
+    void insertar(Pedido val);
     void pintar();
     void dibujar();
     ~Arbol();
 
 private:
     pnodoAbb raiz;
-    pnodoAbb insertar(pnodoAbb, int);
+    pnodoAbb insertar(pnodoAbb, Pedido);
     void pintar(pnodoAbb);
     int altura(pnodoAbb);
     void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int minPos,
