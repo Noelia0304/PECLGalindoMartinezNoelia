@@ -135,4 +135,6 @@ int Arbol::numNodos(){
     
 }
 
-Arbol::~Arbol() {}
+Arbol::~Arbol() {
+
+}
