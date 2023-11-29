@@ -32,6 +32,19 @@ void Lista::insertar(Pedido pedido)
     longitud++;
 }
 
+Pedido Lista::extraer()
+{
+    pnodoLista nodo;
+    Pedido pedido;
+    if(!ultimo)
+        return pedido;
+    nodo = ultimo;
+    ultimo = nodo->siguiente;
+    pedido = nodo->valor;
+    longitud--;
+    delete nodo;
+    return pedido;
+}
 
 void Lista::mostrar()
 {
