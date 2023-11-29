@@ -101,7 +101,7 @@ int main(int argc, char** argv)
                 gestor.reiniciar();
             break;
         case 'M':
-            //gestor.dibujarAbb();
+                gestor.dibujarAbb();
             break;
         case 'N':
             //gestor.pedidosArbolE();
