@@ -251,7 +251,7 @@ void Gestor::insertarPedidosArbol(){
 }
 
 int Gestor::PedidosEnArbol(){
-    arbol.numNodos(arbol);
+    return arbol.numNodos(arbol);
 }
 
 Gestor::~Gestor()
