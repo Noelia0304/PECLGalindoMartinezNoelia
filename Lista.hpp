@@ -9,6 +9,7 @@ public:
     ~Lista();
     void insertar(Pedido pedido);
     void mostrar();
+    Pedido extraer();
     Pedido getMenor();
     Pedido getMayor();
     void eliminar();
