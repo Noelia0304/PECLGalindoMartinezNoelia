@@ -133,7 +133,7 @@ int Arbol::numNodos(Arbol arbol){
     if(raiz ==nullptr){
         cont = 0;
     }else{
-        cont = 1+ numNodos(izq) + numNodos(der);
+        //cont = 1+ numNodos(izq) + numNodos(der);
     }
     return cont;
 }
