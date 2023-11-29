@@ -35,7 +35,7 @@ public:
     void buscarPedidos();
     void reiniciar();
     void insertarPedidosArbol();
-    //int PedidosEnArbol();
+    int PedidosEnArbol();
     void dibujarAbb();
 
 private:
