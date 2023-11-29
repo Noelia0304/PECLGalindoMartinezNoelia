@@ -128,24 +128,21 @@ void Arbol::dibujar()
     cout << '\n' << '\n';
 }
 
-int Arbol::numNodos(Arbol arbol){
-    int cont;
-    if(raiz ==nullptr){
-        cont = 0;
-    }else{
-        //cont = 1+ numNodos(izq) + numNodos(der);
+/*int Arbol::numNodos(Arbol arbol) {
+    if (arbol.raiz == nullptr) {
+        return 0;
+    } else {
+        return 1 + numNodos(arbol.izq) + numNodos(arbol.der);
     }
-    return cont;
-}
+}*/
 
-int Arbol::numNodos(pnodoAbb nodo){
-    int cont;
-    if(nodo == nullptr){
-        cont = 0;
-    } else{
-        cont = 1 + numNodos(nodo->izq) + numNodos(nodo->der);
+
+int Arbol::numNodos(pnodoAbb nodo) {
+    if (nodo == nullptr) {
+        return 0;
+    } else {
+        return 1 + numNodos(nodo->izq) + numNodos(nodo->der);
     }
-    return cont;
 }
 
 Arbol::~Arbol() {
