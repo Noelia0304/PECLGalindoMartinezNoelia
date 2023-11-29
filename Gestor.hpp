@@ -5,6 +5,7 @@
 #include "Pila.hpp"
 #include "Cola.hpp"
 #include "Lista.hpp"
+#include "Arbol.hpp"
 using namespace std;
 
 class Gestor
@@ -33,6 +34,8 @@ public:
     void muestraPedidosUrgentes();
     void buscarPedidos();
     void reiniciar();
+    void insertarPedidosArbol();
+    int PedidosEnArbol();
 
 private:
     Pila pilaPedidos;
