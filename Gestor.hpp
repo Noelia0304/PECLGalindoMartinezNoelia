@@ -36,6 +36,7 @@ public:
     void reiniciar();
     void insertarPedidosArbol();
     int PedidosEnArbol();
+    void dibujarAbb();
 
 private:
     Pila pilaPedidos;
