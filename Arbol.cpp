@@ -8,14 +8,14 @@ void Arbol::insertar(Pedido pedido) {
     raiz = insertar(raiz, pedido); 
 }
 
-pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedido)
+pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
 {
     if(!nodo)
-        return new NodoArbol(pedido);
-    if(pedido.getNumSeg() <= nodo->pedido.getNumSeg())
-        nodo->izq = insertar(nodo->izq, pedido);
+        return new NodoArbol(pedidoI);
+    if(pedidoI.getNumSeg() <= nodo->pedido.getNumSeg())
+        nodo->izq = insertar(nodo->izq, pedidoI);
     else
-        nodo->der = insertar(nodo->der, pedido);
+        nodo->der = insertar(nodo->der, pedidoI);
     return nodo;
 }
 
