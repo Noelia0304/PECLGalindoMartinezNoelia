@@ -250,12 +250,17 @@ void Gestor::insertarPedidosArbol(){
     }
 }
 
-/*int Gestor::PedidosEnArbol(){
+int Gestor::PedidosEnArbol(){
     return arbol.numNodos();
-}*/
+}
 void Gestor::dibujarAbb(){
+    
+    Pedido pedidoAux;
+    pedidoAux.setNumSeg(500);
+    arbol.insertar(pedidoAux);
+    
     insertarPedidosArbol();
-    //PedidosEnArbol();
+    PedidosEnArbol();
     arbol.dibujar();
 }
 
