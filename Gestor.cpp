@@ -238,6 +238,18 @@ void Gestor:: reiniciar()
     tamanoArrayNumSeg = 0;
 }
 
+void Gestor::insertarPedidosArbol(){
+    Pedido pedido; 
+    while(ListaUrgente.getLongitud() != 0){
+         pedido = ListaUrgente.extraer();
+         arbol.insertar(pedido);
+    }
+    while(ListaEstandar.getLongitud()!= 0){
+        pedido = ListaEstandar.extraer();
+        arbol.insertar(pedido);
+    }
+}
+
 int Gestor::PedidosEnArbol(){
     arbol.numNodos();
 }
