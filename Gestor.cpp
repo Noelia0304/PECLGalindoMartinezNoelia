@@ -250,12 +250,12 @@ void Gestor::insertarPedidosArbol(){
     }
 }
 
-int Gestor::PedidosEnArbol(){
-    return arbol.numNodos(arbol);
-}
+/*int Gestor::PedidosEnArbol(){
+    return arbol.numNodos();
+}*/
 void Gestor::dibujarAbb(){
     insertarPedidosArbol();
-    PedidosEnArbol();
+    //PedidosEnArbol();
     arbol.dibujar();
 }
 
