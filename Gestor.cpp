@@ -253,6 +253,11 @@ void Gestor::insertarPedidosArbol(){
 int Gestor::PedidosEnArbol(){
     return arbol.numNodos(arbol);
 }
+void Gestor::dibujarAbb(){
+    insertarPedidosArbol();
+    PedidosEnArbol();
+    arbol.dibujar();
+}
 
 Gestor::~Gestor()
 {
