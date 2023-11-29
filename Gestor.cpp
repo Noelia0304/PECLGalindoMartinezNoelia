@@ -253,6 +253,7 @@ void Gestor::insertarPedidosArbol(){
 int Gestor::PedidosEnArbol(){
     return arbol.numNodos();
 }
+
 void Gestor::dibujarAbb(){
     
     Pedido pedidoAux;
