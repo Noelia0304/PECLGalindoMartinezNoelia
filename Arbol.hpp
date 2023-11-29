@@ -13,6 +13,8 @@ public:
     void insertar(Pedido pedido);
     void pintar();
     void dibujar();
+    int numNodos(Arbol arbol);
+    int numNodos(pnodoAbb nodo);
     ~Arbol();
 
 private:
