@@ -12,10 +12,10 @@ pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedido)
 {
     if(!nodo)
         return new NodoArbol(pedido);
-    if(pedido.getNumSeg() <= nodo->dato.getNumSeg())
-        nodo->izq = insertar(nodo->izq, val);
+    if(pedido.getNumSeg() <= nodo->pedido.getNumSeg())
+        nodo->izq = insertar(nodo->izq, pedido);
     else
-        nodo->der = insertar(nodo->der, val);
+        nodo->der = insertar(nodo->der, pedido);
     return nodo;
 }
 
@@ -77,7 +77,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
     if(space > 0)
         output[nivel] += string(space, ' ');
     int numeroQueQuieroImprimirEnElArbol =
-        nodo->dato.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
+        nodo->pedido.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
     string nododato = SP + to_string(numeroQueQuieroImprimirEnElArbol) + SP;
     output[nivel] += nododato;
 
@@ -143,7 +143,7 @@ int Arbol::numNodos(pnodoAbb nodo){
     if(nodo == nullptr){
         cont = 0;
     } else{
-        cont = 1 + numNodos(izq) + numNodos(der);
+        cont = 1 + numNodos(nodo->izq) + numNodos(nodo->der);
     }
     return cont;
 }
