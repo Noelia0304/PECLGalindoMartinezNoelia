@@ -17,7 +17,7 @@ int main(int argc, char** argv)
              << gestor.PedidosEnSalaD()
              << " \n\tPedidos en las listas:\n \t\tEstandar-> "
              <<  gestor.PedidosEnListaEstandar() << "\tUrgentes-> " <<  gestor.PedidosEnListaUrgente()
-             << "\n\tPedidos en el arbol -> " <<                             gestor.PedidosEnArbol()
+             << "\n\tPedidos en el arbol -> " << 0                            /*gestor.PedidosEnArbol()*/
              << "\n";
         cout << "\t----------------------------------------------------------------"
                 "------\n\n";
