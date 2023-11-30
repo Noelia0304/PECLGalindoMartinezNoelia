@@ -259,7 +259,6 @@ void Gestor::dibujarAbb(){
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
     arbol.insertar(pedidoAux);
-    
     insertarPedidosArbol();
     PedidosEnArbol();
     arbol.dibujar();
