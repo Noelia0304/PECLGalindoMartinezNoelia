@@ -139,7 +139,9 @@ int Arbol::numNodos(pnodoAbb nodo) {
         return 1 + numNodos(nodo->izq) + numNodos(nodo->der);
     }
 }
-
+void Arbol::borrarNodo(){
+    
+}
 Arbol::~Arbol() {
 
 }
