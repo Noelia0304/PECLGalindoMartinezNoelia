@@ -244,10 +244,10 @@ void Gestor::insertarPedidosArbol(){
          pedido = ListaUrgente.extraer();
          arbol.insertar(pedido);
     }
-    /*while(ListaEstandar.getLongitud()!= 0){
+    while(ListaEstandar.getLongitud()!= 0){
         pedido = ListaEstandar.extraer();
         arbol.insertar(pedido);
-    }*/
+    }
 }
 
 int Gestor::PedidosEnArbol(){
