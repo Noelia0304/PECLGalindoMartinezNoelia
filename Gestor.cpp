@@ -251,7 +251,7 @@ void Gestor::insertarPedidosArbol(){
 }
 
 int Gestor::PedidosEnArbol(){
-    return arbol.numNodos();
+    return arbol.numNodos();  
 }
 
 void Gestor::dibujarAbb(){
@@ -259,7 +259,6 @@ void Gestor::dibujarAbb(){
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
     arbol.insertar(pedidoAux);
-    
     insertarPedidosArbol();
     arbol.dibujar();
 }
