@@ -263,6 +263,13 @@ void Gestor::dibujarAbb(){
     arbol.dibujar();
 }
 
+void Gestor::PedidosArbolE(){
+    
+}
+
+void Gestor::PedidosArbolU(){
+    
+}
 Gestor::~Gestor()
 {
 }
