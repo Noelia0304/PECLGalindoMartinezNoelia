@@ -19,6 +19,16 @@ pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
     return nodo;
 }
 
+pnodoAbb Arbol::insertarOrdenNumSeg(pnodoAbb nodo, Pedido pedidoI)
+{
+    if(!nodo)
+        return new NodoArbol(pedidoI);
+    if(pedidoI.getNumSeg() <= nodo->pedido.getNumSeg())
+        nodo->der = insertar(nodo->der, pedidoI);
+    else
+        nodo->izq = insertar(nodo->izq, pedidoI);
+    return nodo;
+}
 void Arbol::pintar()
 {
     pintar(raiz);
