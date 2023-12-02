@@ -263,8 +263,11 @@ void Gestor::dibujarAbb(){
     arbol.dibujar();
 }
 
-/*void Gestor::PedidosArbolE(){
-    
+void Gestor::PedidosArbolE(){
+    Pedido pedido;
+    while(ListaEstandar.getLongitud()!= 0){
+        pedido = ListaEstandar.extraer();
+        arbol.insertar(pedido);
 }
 
 void Gestor::PedidosArbolU(){
