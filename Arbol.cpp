@@ -142,6 +142,8 @@ int Arbol::numNodos(pnodoAbb nodo) {
 /*void Arbol::borrarNodo(){
     
 }*/
+
+
 Arbol::~Arbol() {
 
 }
