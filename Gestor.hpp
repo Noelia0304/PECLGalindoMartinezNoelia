@@ -36,6 +36,8 @@ public:
     void reiniciar();
     void insertarPedidosArbol();
     int PedidosEnArbol();
+    void PedidosArbolE();
+    void PedidosArbolU();
     void dibujarAbb();
 
 private:
