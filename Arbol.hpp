@@ -20,6 +20,7 @@ public:
 private:
     pnodoAbb raiz;
     pnodoAbb insertar(pnodoAbb, Pedido);
+    pnodoAbb insertarOrdenNumSeg(pnodoAbb, Pedido);
     void pintar(pnodoAbb);
     int altura(pnodoAbb);
     void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int minPos,
