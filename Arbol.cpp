@@ -29,6 +29,15 @@ pnodoAbb Arbol::insertarOrdenNumSeg(pnodoAbb nodo, Pedido pedidoI)
         nodo->izq = insertar(nodo->izq, pedidoI);
     return nodo;
 }
+
+void mostrarPedidosEstandar(pnodoAbb nodo){
+    if (nodo)
+        mostrarPedidos(nodo->izq);
+        if(!nodo->pedido.esUrgente())
+            nodo->pedido.mostrar();
+        mostrarPedido(nodo->der);
+}
+
 void Arbol::pintar()
 {
     pintar(raiz);
