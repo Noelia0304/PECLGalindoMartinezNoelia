@@ -266,6 +266,7 @@ void Gestor::dibujarAbb(){
 void Gestor::PedidosArbolE(){
     Arbol arbolAux;
     
+    
 }
 
 void Gestor::PedidosArbolU(){
