@@ -264,12 +264,10 @@ void Gestor::dibujarAbb(){
 
 void Gestor::PedidosArbolE(){
     arbol.inorden();
-    //ListaEstandar.mostrar();
 }
 
 void Gestor::PedidosArbolU(){
     arbol.inorden();
-    ListaUrgente.mostrar();
 }
 
 Gestor::~Gestor()
