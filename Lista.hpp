@@ -8,6 +8,7 @@ public:
     Lista();
     ~Lista();
     void insertar(Pedido pedido);
+    void insertarOrdenNumSeg(Pedido pedido);
     void mostrar();
     Pedido extraer();
     Pedido getMenor();
