@@ -173,9 +173,11 @@ void Arbol::inorden(pnodoAbb nodo, Lista (pedidosUrgentes), Lista (pedidosNoUrge
         if (nodo->pedido.esUrgente()) {
             // Insertar en orden ascendente en la lista de pedidos urgentes
             pedidosUrgentes.insertarOrdenNumSeg(nodo->pedido);
+            pedidosUrgentes.mostrar();
         } else {
             // Insertar en orden ascendente en la lista de pedidos no urgentes
             pedidosNoUrgentes.insertarOrdenNumSeg(nodo->pedido);
+            pedidosNoUrgentes.mostrar();
         }
 
         inorden(nodo->der, pedidosUrgentes, pedidosNoUrgentes);
