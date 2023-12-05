@@ -17,7 +17,8 @@ public:
     void dibujar();
     int numNodos();
     int numNodos(pnodoAbb nodo);
-    void inorden(pnodoAbb nodo, Lista,Lista);
+    void inorden();
+    void inorden(pnodoAbb nodo,Lista pedidosU,Lista pedidosNoUrgentes);
     ~Arbol();
 
 private:
