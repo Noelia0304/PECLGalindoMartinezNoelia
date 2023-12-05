@@ -255,7 +255,6 @@ int Gestor::PedidosEnArbol(){
 }
 
 void Gestor::dibujarAbb(){
-    
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
     arbol.insertar(pedidoAux);
@@ -264,12 +263,12 @@ void Gestor::dibujarAbb(){
 }
 
 void Gestor::PedidosArbolE(){
-    arbol.inorden(pnodoAbb nodo,ListaEstandar,ListaUrgente);
-    ListaEstandar.mostrar();
+    arbol.inorden();
+    //ListaEstandar.mostrar();
 }
 
 void Gestor::PedidosArbolU(){
-    arbol.inorden(pnodoAbb nodo,ListaEstandar,ListaUrgente);
+    arbol.inorden();
     ListaUrgente.mostrar();
 }
 
