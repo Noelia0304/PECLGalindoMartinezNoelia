@@ -2,6 +2,7 @@
 #define ARBOL_HPP
 
 #include "NodoArbol.hpp"
+#include "Lista.hpp"
 
 #include <vector>
 using namespace std;
@@ -16,6 +17,7 @@ public:
     void dibujar();
     int numNodos();
     int numNodos(pnodoAbb nodo);
+    void inorden(pnodoAbb nodo);
     ~Arbol();
 
 private:
