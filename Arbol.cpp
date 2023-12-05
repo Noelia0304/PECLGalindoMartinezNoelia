@@ -162,14 +162,23 @@ int Arbol::numNodos(pnodoAbb nodo) {
     }
 }
 
-void Arbol::inorden(pnodoAbb nodo) {
-    Lista lista;
+void Arbol::inorden(pnodoAbb nodo, Lista pedidosUrgentes, Lista pedidosNoUrgentes) {
+    
     if (nodo != nullptr) {
-        inorden(nodo->izq);
-        lista.insertar(nodo-> pedido);
-        inorden(nodo->der);
+        inorden(nodo->izq, pedidosUrgentes, pedidosNoUrgentes);
+
+        if (nodo->pedido.esUrgente()) {
+            // Insertar en orden ascendente en la lista de pedidos urgentes
+            pedidosUrgentes.insertarOrdenNumSeg(nodo->pedido);
+        } else {
+            // Insertar en orden ascendente en la lista de pedidos no urgentes
+            pedidosNoUrgentes.insertarOrdenNumSeg(nodo->pedido);
+        }
+
+        inorden(nodo->der, pedidosUrgentes, pedidosNoUrgentes);
     }
 }
+
 
 /*void Arbol::borrarNodo(){
     
