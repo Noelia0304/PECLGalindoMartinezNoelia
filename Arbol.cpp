@@ -19,7 +19,7 @@ pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
     return nodo;
 }
 
-pnodoAbb Arbol::insertarOrdenNumSeg(pnodoAbb nodo, Pedido pedidoI)
+/*pnodoAbb Arbol::insertarOrdenNumSeg(pnodoAbb nodo, Pedido pedidoI)
 {
     if(!nodo)
         return new NodoArbol(pedidoI);
@@ -28,7 +28,7 @@ pnodoAbb Arbol::insertarOrdenNumSeg(pnodoAbb nodo, Pedido pedidoI)
     else
         nodo->izq = insertar(nodo->izq, pedidoI);
     return nodo;
-}
+}*/
 
 void Arbol::mostrarPedidosEstandar(pnodoAbb nodo){
     if (nodo){
