@@ -264,13 +264,13 @@ void Gestor::dibujarAbb(){
 }
 
 void Gestor::PedidosArbolE(){
-    Arbol arbolAux;
-    
-    
+    arbol.inorden(pnodoAbb nodo,ListaEstandar,ListaUrgente);
+    ListaEstandar.mostrar();
 }
 
 void Gestor::PedidosArbolU(){
-    
+    arbol.inorden(pnodoAbb nodo,ListaEstandar,ListaUrgente);
+    ListaUrgente.mostrar();
 }
 
 Gestor::~Gestor()
