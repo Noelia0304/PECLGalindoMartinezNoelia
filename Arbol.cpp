@@ -151,19 +151,22 @@ void Arbol::dibujar()
 }
 
 int Arbol::numNodos() {
-    return numNodos(raiz);
+   return numNodos(raiz);
 }
 
 int Arbol::numNodos(pnodoAbb nodo) {
     if (nodo == nullptr) {
         return 0;
-    } else {
+    } else{
         return 1 + numNodos(nodo->izq) + numNodos(nodo->der);
     }
 }
+void Arbol::inorden(){
+    Lista pedidosUrgentes, pedidosNoUrgentes;
+    return inorden(raiz, pedidosUrgentes, pedidosNoUrgentes);
+}
 
-void Arbol::inorden(pnodoAbb nodo, Lista pedidosUrgentes, Lista pedidosNoUrgentes) {
-    
+void Arbol::inorden(pnodoAbb nodo, Lista (pedidosUrgentes), Lista (pedidosNoUrgentes)) {
     if (nodo != nullptr) {
         inorden(nodo->izq, pedidosUrgentes, pedidosNoUrgentes);
 
