@@ -32,6 +32,33 @@ void Lista::insertar(Pedido pedido)
     longitud++;
 }
 
+void Lista::insertarOrdenNumSeg(Pedido pedido) {
+    pnodoLista nuevo;
+    nuevo = new NodoLista(pedido);
+
+    if (!primero || pedido.getNumSeg() < primero->valor.getNumSeg()) {
+        nuevo->siguiente = primero;
+        primero = nuevo;
+    } else {
+        pnodoLista actual = primero;
+        while (actual->siguiente != nullptr && pedido.getNumSeg() > actual->siguiente->valor.getNumSeg()) {
+            actual = actual->siguiente;
+        }
+        nuevo->siguiente = actual->siguiente;
+        actual->siguiente = nuevo;
+    }
+
+    // Elimina el siguiente bloque de código ya que puede romper el orden de la lista
+    /*pnodoLista ultimo = primero;
+    while (ultimo->siguiente) {
+        ultimo = ultimo->siguiente;
+    }
+    ultimo->siguiente = nullptr;*/
+
+    longitud++;
+}
+
+
 Pedido Lista::extraer()
 {
     pnodoLista nodo;
