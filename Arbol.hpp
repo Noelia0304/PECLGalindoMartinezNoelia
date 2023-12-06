@@ -21,6 +21,8 @@ public:
     void inorden(pnodoAbb nodo,Lista pedidosU,Lista pedidosNoUrgentes);
     int numImpares();
     int numImpares(pnodoAbb nodo);
+    void NodoHoja();
+    void NodoHoja(pnodoAbb nodo);
     ~Arbol();
 
 private:
