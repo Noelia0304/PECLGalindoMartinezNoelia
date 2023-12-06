@@ -23,6 +23,8 @@ public:
     int numImpares(pnodoAbb nodo);
     void NodoHoja();
     void NodoHoja(pnodoAbb nodo);
+    pnodoAbb encontrarMinimo(pnodoAbb nodo);
+    pnodoAbb encontrarMaximo(pnodoAbb nodo);
     ~Arbol();
 
 private:
