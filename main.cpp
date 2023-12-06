@@ -119,7 +119,7 @@ int main(int argc, char** argv)
                 gestor.NumSegImpar();
             break;
         case 'T':
-            //gestor.PedidosNodoHoja();
+                gestor.PedidosNodoHoja();
             break;
         case 'U':
             //gestor.eliminarPedido();
