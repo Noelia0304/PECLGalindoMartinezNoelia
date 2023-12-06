@@ -193,15 +193,15 @@ int Arbol::numImpares(pnodoAbb nodo) {
         return 0;
     }
 
-    int count = 0;
+    int cont = 0;
 
     if (nodo->pedido.getNumSeg() % 2 != 0) {
-        count = 1;
+        cont = 1;
     }
-    count += numImpares(nodo->izq);
-    count += numImpares(nodo->der);
+    cont += numImpares(nodo->izq);
+    cont += numImpares(nodo->der);
 
-    return count;
+    return cont;
 }
 
 
