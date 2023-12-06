@@ -225,9 +225,20 @@ void Arbol::NodoHoja(pnodoAbb nodo){
     NodoHoja(nodo->der);
 }
 
-/*void Arbol::borrarNodo(){
-    
-}*/
+void Arbol::borrarNodo(pnodoAbb nodo){
+    pnodoAbb nuevo;
+    if(nodo->izq == nullptr){
+        nuevo = nodo->der;
+       delete nodo; 
+    }else{
+        if(nodo->der == nullptr){
+            nuevo = nodo->izq;
+            delete nodo;
+        }else{
+            
+        }
+    }  
+}
 
 
 Arbol::~Arbol() {
