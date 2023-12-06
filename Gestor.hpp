@@ -40,6 +40,7 @@ public:
     void PedidosArbolU();
     void dibujarAbb();
     int NumSegImpar();
+    void PedidosNodoHoja();
 
 private:
     Pila pilaPedidos;
