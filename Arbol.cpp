@@ -235,10 +235,66 @@ void Arbol::borrarNodo(pnodoAbb nodo){
             nuevo = nodo->izq;
             delete nodo;
         }else{
+            pnodoAbb sucesor = encontrarMinimo(nodo->der);
+            nodo->pedido = sucesor->pedido;
+            nodo->der = borrarNodo(sucesor, nodo->der);
             
         }
     }  
 }
+
+pnodoAbb Arbol::borrarNodo(pnodoAbb nodo, pnodoAbb raiz) {
+    if (raiz == nullptr) {
+        return raiz;
+    }
+
+    if (nodo->valor < raiz->valor) {
+        raiz->izq = borrarNodo(nodo, raiz->izq);
+    } else if (nodo->valor > raiz->valor) {
+        raiz->der = borrarNodo(nodo, raiz->der);
+    } else {
+        
+        if (raiz->izq == nullptr) {
+            pnodoAbb temp = raiz->der;
+            delete raiz;
+            return temp;
+        } else if (raiz->der == nullptr) {
+            pnodoAbb temp = raiz->izq;
+            delete raiz;
+            return temp;
+        }
+
+        // Nodo con dos hijos
+        pnodoAbb sucesor = encontrarMinimo(raiz->der);
+        raiz->valor = sucesor->valor;
+        raiz->der = borrarNodo(sucesor, raiz->der);
+    }
+
+    return raiz;
+}
+
+pnodoAbb Arbol::encontrarMinimo(pnodoAbb nodo) {
+    if(nodo == nullptr){
+        return nullptr;
+    }
+    
+    while (nodo->izq != nullptr) {
+        nodo = nodo->izq;
+    }
+    return nodo;
+}
+
+pnodoAbb Arbol:encontrarMaximo(pnodoAbb nodo){
+    if(nodo == nullptr){
+        return nullptr;
+    }
+    
+    while(nodo->der != nullptr){
+        nodo = nodo->der;
+    }
+    return nodo;
+}
+
 
 
 Arbol::~Arbol() {
