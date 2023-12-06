@@ -157,8 +157,13 @@ int Arbol::numNodos() {
 int Arbol::numNodos(pnodoAbb nodo) {
     if (nodo == nullptr) {
         return 0;
-    } else{
-        return 1 + numNodos(nodo->izq) + numNodos(nodo->der);
+    }else{
+        if(nodo -> pedido.getNumSeg() == 500){
+            return 0 + numNodos(nodo->izq) + numNodos(nodo->der);
+        }else{
+            return 1 + numNodos(nodo->izq) + numNodos(nodo->der);
+        }
+        
     }
 }
 void Arbol::inorden(){
