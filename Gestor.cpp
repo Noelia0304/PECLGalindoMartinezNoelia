@@ -274,6 +274,10 @@ int Gestor::NumSegImpar(){ // Apartado R
     cout <<  "\t" << setw(10) << " Hay " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
 }
 
+void Gestor::PedidosNodoHoja(){
+    arbol.NodoHoja();
+}
+
 Gestor::~Gestor()
 {
 }
