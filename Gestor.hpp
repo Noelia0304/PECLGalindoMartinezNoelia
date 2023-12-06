@@ -39,6 +39,7 @@ public:
     void PedidosArbolE();
     void PedidosArbolU();
     void dibujarAbb();
+    int NumSegImpar();
 
 private:
     Pila pilaPedidos;
