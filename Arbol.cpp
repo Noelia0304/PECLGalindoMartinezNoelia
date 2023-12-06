@@ -209,6 +209,21 @@ int Arbol::numImpares(pnodoAbb nodo) {
     return cont;
 }
 
+void Arbol::NodoHoja(){
+    NodoHoja(raiz);
+}
+
+void Arbol::NodoHoja(pnodoAbb nodo){
+    if(nodo == nullptr){
+        return;
+    }
+    
+    if(nodo->izq == nullptr && nodo->der == nullptr){
+        nodo->pedido.mostrar();
+    }
+    NodoHoja(nodo->izq);
+    NodoHoja(nodo->der);
+}
 
 /*void Arbol::borrarNodo(){
     
