@@ -53,10 +53,10 @@ void Pedido::mostrar()
     if(urgente){
        urgencia = "urgente"; 
     }
-    if(!ID == 0 && !numSeg == 0){
+    if(ID != 0 && numSeg != 0){
        cout << "\t" << setw(10) << DNI << " del tipo " << urgencia << " con ID " << ID << " con numero de seguimiento " << numSeg << endl;; 
     }else{
-        if(numSeg == 0 && !ID == 0){
+        if(numSeg == 0 && ID != 0){
             cout << "\t" << setw(10) << DNI << " del tipo " << urgencia << " con ID " << ID << endl;
         }else{
            cout << "\t" << setw(10) << DNI << " del tipo " << urgencia << endl; 
