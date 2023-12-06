@@ -271,7 +271,7 @@ void Gestor::PedidosArbolU(){
 }
 
 int Gestor::NumSegImpar(){
-    cout <<  "\t" << setw(10) << "Los pedidos con numero de seguimiento impar son: " << arbol.numImpares() << endl;
+    cout <<  "\t" << setw(10) << " Hay  " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
 }
 
 Gestor::~Gestor()
