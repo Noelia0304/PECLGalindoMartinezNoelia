@@ -184,6 +184,26 @@ void Arbol::inorden(pnodoAbb nodo, Lista (pedidosUrgentes), Lista (pedidosNoUrge
     }
 }
 
+int Arbol::numImpares() {
+    return numImpares(raiz);
+}
+
+int Arbol::numImpares(pnodoAbb nodo) {
+    if (nodo == nullptr) {
+        return 0;
+    }
+
+    int count = 0;
+
+    if (nodo->pedido.getNumSeg() % 2 != 0) {
+        count = 1;
+    }
+    count += numImpares(nodo->izq);
+    count += numImpares(nodo->der);
+
+    return count;
+}
+
 
 /*void Arbol::borrarNodo(){
     
