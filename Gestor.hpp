@@ -36,11 +36,14 @@ public:
     void reiniciar();
     void insertarPedidosArbol();
     int PedidosEnArbol();
+    void dibujarAbb();
     void PedidosArbolE();
     void PedidosArbolU();
-    void dibujarAbb();
-    int NumSegImpar();
+    void PedidosInorden();
+    void buscarPedidosArbol();
+    void NumSegImpar();
     void PedidosNodoHoja();
+    void eliminarPedido();
 
 private:
     Pila pilaPedidos;
