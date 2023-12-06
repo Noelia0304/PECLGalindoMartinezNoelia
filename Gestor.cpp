@@ -254,7 +254,7 @@ int Gestor::PedidosEnArbol(){
     return arbol.numNodos();  
 }
 
-void Gestor::dibujarAbb(){
+void Gestor::dibujarAbb(){ //Apartado M
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
     arbol.insertar(pedidoAux);
@@ -262,16 +262,16 @@ void Gestor::dibujarAbb(){
     arbol.dibujar();
 }
 
-void Gestor::PedidosArbolE(){
+void Gestor::PedidosArbolE(){ //Apartado N 
     arbol.inorden();
 }
 
-void Gestor::PedidosArbolU(){
+void Gestor::PedidosArbolU(){ //Apartado O
     arbol.inorden();
 }
 
-int Gestor::NumSegImpar(){
-    cout <<  "\t" << setw(10) << " Hay  " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
+int Gestor::NumSegImpar(){ // Apartado R
+    cout <<  "\t" << setw(10) << " Hay " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
 }
 
 Gestor::~Gestor()
