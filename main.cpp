@@ -116,7 +116,7 @@ int main(int argc, char** argv)
             //gestor.buscarPedidosArbol();
             break;
         case 'R':
-            //gestor.NumSegImpar();
+                gestor.NumSegImpar();
             break;
         case 'T':
             //gestor.PedidosNodoHoja();
