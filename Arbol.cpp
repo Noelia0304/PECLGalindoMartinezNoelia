@@ -274,69 +274,57 @@ pnodoAbb Arbol::borrarNodo(pnodoAbb nodo, pnodoAbb raiz) {
 }*/
 
 pnodoAbb Arbol::encontrarMinimo(pnodoAbb nodo) {
-    if(nodo == nullptr){
-        return nullptr;
+    if(nodo == nullptr || nodo->izq == nullptr){
+        return nodo;
     }
-    
-    while (nodo->izq != nullptr) {
-        nodo = nodo->izq;
-    }
-    return nodo;
+    return encontrarMinimo(nodo->izq);
 }
 
-pnodoAbb Arbol:encontrarMaximo(pnodoAbb nodo){
-    if(nodo == nullptr){
-        return nullptr;
+pnodoAbb Arbol::encontrarMaximo(pnodoAbb nodo){
+    if(nodo == nullptr || nodo->der == nullptr){
+        return nodo;
     }
-    
-    while(nodo->der != nullptr){
-        nodo = nodo->der;
-    }
-    return nodo;
+    return encontrarMaximo(nodo->der);
 }
 
 void Arbol::buscarAbb(){
-    pnodoAbb minimoEstandar = encontrarMinimo(raiz);
-    pnodoAbb maximoEstandar = encontrarMaximo(raiz);
-    
-    if(minimoEstandar != nullptr){
-        cout << "Pedido estandar con menor numero de seguimiento: " << endl;
-        minimoEstandar->pedido.mostrar();
-    }
-    
-    if(maximoEstandar != nullptr){
-        cout << "Pedido estandar con mayor numero de seguimiento: " << endl;
-        maximoEstandar->pedido.mostrar();
-    }
-    
     buscarAbb(raiz);
 }
 
 void Arbol::buscarAbb(pnodoAbb nodo){
-    if(nodo == nullptr){
-        return;
-    } else{
+    if(nodo != nullptr){
         if(!nodo->pedido.esUrgente()){
-            nodo->pedido.mostrar();
             
-            pnodoAbb minimo = encontrarMinimo(nodo->izq);
-            pnodoAbb maximo = encontrarMaximo(nodo->izq);
-            
+            pnodoAbb minimo = encontrarMinimo(nodo->der);
             if(minimo != nullptr){
-                cout << "Pedido urgente con menor ID: " << endl;
+                cout <<"\t" << setw(10) << "Pedido urgente con menor ID: " << endl;
                 minimo->pedido.mostrar();
             }
             
+            pnodoAbb maximo = encontrarMaximo(nodo->der);
             if(maximo != nullptr){
-                cout << "Pedido urgente con mayor ID: " << endl;
+                cout << "\t" << setw(10) << "Pedido urgente con mayor ID: " << endl;
                 maximo->pedido.mostrar();
             }
-        }
+        } else{
+            /*pnodoAbb minimoU = encontrarMinimo(nodo->der);
+            if(minimoU != nullptr){
+                cout << "\t" << setw(10) << "Pedido urgente con menor ID: " << endl;
+                minimoU->pedido.mostrar();
+            }
+            
+            pnodoAbb maximoU = encontrarMaximo(nodo->der);
+            if(maximoU != nullptr){
+                cout << "\t" << setw(10) << "Pedido urgente con mayor ID: " << endl;
+                maximoU->pedido.mostrar();
+            }
+        }*/
+        
         buscarAbb(nodo->izq);
-        buscarAbb(nodo->der);
+        //buscarAbb(nodo->der);
     }
 }
 
-Arbol::~Arbol() {
+Arbol::~Arbol(){
 
 }
