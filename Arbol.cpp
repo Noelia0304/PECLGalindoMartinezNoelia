@@ -203,9 +203,9 @@ int Arbol::numImpares() {
 }
 
 int Arbol::numImpares(pnodoAbb nodo) {
-    if (nodo == nullptr) {
+    /*if (nodo == nullptr){
         return 0;
-    }
+    }*/
 
     int cont = 0;
 
