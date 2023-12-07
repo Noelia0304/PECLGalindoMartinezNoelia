@@ -30,6 +30,11 @@ pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
     return nodo;
 }*/
 
+void Arbol::mostrarPedidosEstandar(){
+    mostrarPedidosEstandar(raiz->izq);
+    cout << '\n' ;
+}
+
 void Arbol::mostrarPedidosEstandar(pnodoAbb nodo){
     if (nodo){
         mostrarPedidosEstandar(nodo->izq);
@@ -39,6 +44,8 @@ void Arbol::mostrarPedidosEstandar(pnodoAbb nodo){
         mostrarPedidosEstandar(nodo->der);
     }
 }
+
+
         
 
 void Arbol::pintar()
@@ -49,8 +56,9 @@ void Arbol::pintar()
 
 void Arbol::pintar(pnodoAbb nodo)
 {
-    if(!nodo)
+    if(!nodo){
         return;
+    }
     pintar(nodo->izq);
     cout << nodo->pedido.getNumSeg() << " ";
     pintar(nodo->der);
@@ -58,8 +66,9 @@ void Arbol::pintar(pnodoAbb nodo)
 
 int Arbol::altura(pnodoAbb nodo)
 {
-    if(!nodo)
+    if(!nodo){
         return 0;
+    }
     return 1 + max(altura(nodo->izq), altura(nodo->der));
 }
 
@@ -326,5 +335,5 @@ void Arbol::buscarAbb(pnodoAbb nodo){
 }
 
 Arbol::~Arbol() {
-
+    
 }
