@@ -270,12 +270,13 @@ void Gestor::PedidosArbolU(){ //Apartado O
     arbol.inorden();
 }
 
-void Gestor:PedidosInorden(){ //Apartado P
+void Gestor::PedidosInorden(){ //Apartado P
     
 }
 
 void Gestor::buscarPedidosArbol(){ //Apartado Q
-    
+    cout << "\t" << setw(10) << "Los pedidos buscados son: " << endl;
+    arbol.buscarAbb();
 }
 
 void Gestor::NumSegImpar(){ // Apartado R
