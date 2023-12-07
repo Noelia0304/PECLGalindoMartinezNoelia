@@ -263,15 +263,15 @@ void Gestor::dibujarAbb(){ //Apartado M
 }
 
 void Gestor::PedidosArbolE(){ //Apartado N 
-    arbol.inorden();
+    
 }
 
-void Gestor::PedidosArbolU(){ //Apartado O
-    arbol.inorden();
+void Gestor::pedidosArbolU(){ //Apartado O
+
 }
 
 void Gestor::PedidosInorden(){ //Apartado P
-    
+    arbol.inorden();
 }
 
 void Gestor::buscarPedidosArbol(){ //Apartado Q
