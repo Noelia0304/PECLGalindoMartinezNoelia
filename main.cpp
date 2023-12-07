@@ -104,7 +104,7 @@ int main(int argc, char** argv)
                 gestor.dibujarAbb();
             break;
         case 'N':
-            //gestor.pedidosArbolE();
+                gestor.pedidosArbolE();
             break;
         case 'O':
             //gestor.pedidosArbolU();
