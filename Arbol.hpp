@@ -25,6 +25,8 @@ public:
     void NodoHoja(pnodoAbb nodo);
     pnodoAbb encontrarMinimo(pnodoAbb nodo);
     pnodoAbb encontrarMaximo(pnodoAbb nodo);
+    void buscarAbb();
+    void buscarAbb(pnodoAbb nodo);
     ~Arbol();
 
 private:
