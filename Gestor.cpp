@@ -280,7 +280,7 @@ void Gestor::buscarPedidosArbol(){ //Apartado Q
 }
 
 void Gestor::NumSegImpar(){ // Apartado R
-    cout <<  "\t" << setw(10) << " Hay " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
+    cout <<  "\t"<< setw(10) << " Hay " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
 }
 
 void Gestor::PedidosNodoHoja(){ //Apartado T
