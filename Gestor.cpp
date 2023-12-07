@@ -263,10 +263,10 @@ void Gestor::dibujarAbb(){ //Apartado M
 }
 
 void Gestor::PedidosArbolE(){ //Apartado N 
-    
+    arbol.mostrarPedidosEstandar();
 }
 
-void Gestor::pedidosArbolU(){ //Apartado O
+void Gestor::PedidosArbolU(){ //Apartado O
 
 }
 
