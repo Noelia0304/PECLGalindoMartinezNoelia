@@ -12,6 +12,7 @@ class Arbol
 public:
     Arbol();
     void insertar(Pedido pedido);
+    void mostrarPedidosEstandar();
     void mostrarPedidosEstandar(pnodoAbb nodo);
     void pintar();
     void dibujar();
