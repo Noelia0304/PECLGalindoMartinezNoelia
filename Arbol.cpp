@@ -294,7 +294,7 @@ void Arbol::buscarAbb(){
 
 void Arbol::buscarAbb(pnodoAbb nodo){
     if(nodo != nullptr){
-        if(!nodo->pedido.esUrgente()){
+        //if(!nodo->pedido.esUrgente()){
             
             pnodoAbb minimo = encontrarMinimo(nodo->izq);
             if(minimo != nullptr){
@@ -307,7 +307,7 @@ void Arbol::buscarAbb(pnodoAbb nodo){
                 cout << "\t" << setw(10) << "Pedido estandar con mayor numero de seguimiento: " << endl;
                 maximo->pedido.mostrar();
             }
-        }/* else{
+        //} else{
             pnodoAbb minimoU = encontrarMinimo(nodo->der);
             if(minimoU != nullptr){
                 cout << "\t" << setw(10) << "Pedido urgente con menor ID: " << endl;
@@ -319,9 +319,9 @@ void Arbol::buscarAbb(pnodoAbb nodo){
                 cout << "\t" << setw(10) << "Pedido urgente con mayor ID: " << endl;
                 maximoU->pedido.mostrar();
             }
-        }*/
+        //}
         
-        buscarAbb(nodo->izq);
+       // buscarAbb(nodo->izq);
         //buscarAbb(nodo->der);
     }
 }
