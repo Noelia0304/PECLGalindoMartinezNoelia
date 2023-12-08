@@ -294,35 +294,31 @@ void Arbol::buscarAbb(){
 
 void Arbol::buscarAbb(pnodoAbb nodo){
     if(nodo != nullptr){
-        //if(!nodo->pedido.esUrgente()){
             
-            pnodoAbb minimo = encontrarMinimo(nodo->izq);
-            if(minimo != nullptr){
-                cout <<"\t" << setw(10) << "Pedido estandar con menor numero de seguimiento: " << endl;
-                minimo->pedido.mostrar();
-            }
+        pnodoAbb minimo = encontrarMinimo(nodo->izq);
+        if(minimo != nullptr){
+            cout <<"\t" << setw(10) << "Pedido estandar con menor numero de seguimiento: " << endl;
+            minimo->pedido.mostrar();
+        }
             
-            pnodoAbb maximo = encontrarMaximo(nodo->izq);
-            if(maximo != nullptr){
-                cout << "\t" << setw(10) << "Pedido estandar con mayor numero de seguimiento: " << endl;
-                maximo->pedido.mostrar();
-            }
-        //} else{
-            pnodoAbb minimoU = encontrarMinimo(nodo->der);
-            if(minimoU != nullptr){
-                cout << "\t" << setw(10) << "Pedido urgente con menor ID: " << endl;
-                minimoU->pedido.mostrar();
-            }
+        pnodoAbb maximo = encontrarMaximo(nodo->izq);
+        if(maximo != nullptr){
+            cout << "\t" << setw(10) << "Pedido estandar con mayor numero de seguimiento: " << endl;
+            maximo->pedido.mostrar();
+        }
+
+        pnodoAbb minimoU = encontrarMinimo(nodo->der);
+        if(minimoU != nullptr){
+            cout << "\t" << setw(10) << "Pedido urgente con menor ID: " << endl;
+            minimoU->pedido.mostrar();
+        }
             
-            pnodoAbb maximoU = encontrarMaximo(nodo->der);
-            if(maximoU != nullptr){
-                cout << "\t" << setw(10) << "Pedido urgente con mayor ID: " << endl;
-                maximoU->pedido.mostrar();
-            }
-        //}
-        
-       // buscarAbb(nodo->izq);
-        //buscarAbb(nodo->der);
+        pnodoAbb maximoU = encontrarMaximo(nodo->der);
+        if(maximoU != nullptr){
+            cout << "\t" << setw(10) << "Pedido urgente con mayor ID: " << endl;
+            maximoU->pedido.mostrar();
+        }
+    
     }
 }
 
