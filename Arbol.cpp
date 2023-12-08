@@ -31,7 +31,7 @@ pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
 }*/
 
 void Arbol::mostrarPedidosEstandar(){
-    mostrarPedidosEstandar(raiz->izq);
+    mostrarPedidosEstandar(raiz);
     cout << '\n' ;
 }
 
@@ -334,6 +334,7 @@ void Arbol::buscarAbb(pnodoAbb nodo){
     }
 }
 
-Arbol::~Arbol() {
+Arbol::~Arbol()
+{
     
 }
