@@ -107,7 +107,7 @@ int main(int argc, char** argv)
                 gestor.pedidosArbolE();
             break;
         case 'O':
-            //gestor.pedidosArbolU();
+                gestor.pedidosArbolU();
             break;
         case 'P':
                 gestor.PedidosInorden();
