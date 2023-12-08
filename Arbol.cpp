@@ -203,9 +203,9 @@ int Arbol::numImpares() {
 }
 
 int Arbol::numImpares(pnodoAbb nodo) {
-    /*if (nodo == nullptr){
+    if (nodo == nullptr){
         return 0;
-    }*/
+    }
 
     int cont = 0;
 
@@ -315,8 +315,8 @@ void Arbol::buscarAbb(pnodoAbb nodo){
                 cout << "\t" << setw(10) << "Pedido estandar con mayor numero de seguimiento: " << endl;
                 maximo->pedido.mostrar();
             }
-        } else{
-            /*pnodoAbb minimoU = encontrarMinimo(nodo->der);
+        }/* else{
+            pnodoAbb minimoU = encontrarMinimo(nodo->der);
             if(minimoU != nullptr){
                 cout << "\t" << setw(10) << "Pedido urgente con menor ID: " << endl;
                 minimoU->pedido.mostrar();
