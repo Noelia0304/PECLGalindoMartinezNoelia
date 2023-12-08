@@ -12,8 +12,7 @@ class Arbol
 public:
     Arbol();
     void insertar(Pedido pedido);
-    void mostrarPedidosEstandar();
-    void mostrarPedidosEstandar(pnodoAbb nodo);
+    
     void pintar();
     void dibujar();
     int numNodos();
@@ -22,6 +21,10 @@ public:
     void inorden(pnodoAbb nodo);
     int numImpares();
     int numImpares(pnodoAbb nodo);
+    void mostrarPedidosEstandar();
+    void mostrarPedidosEstandar(pnodoAbb nodo);
+    void mostrarPedidosUrgente();
+    void mostrarPedidosUrgente(pnodoAbb nodo);
     void NodoHoja();
     void NodoHoja(pnodoAbb nodo);
     pnodoAbb encontrarMinimo(pnodoAbb nodo);
