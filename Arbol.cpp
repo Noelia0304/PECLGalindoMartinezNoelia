@@ -184,7 +184,7 @@ void Arbol::mostrarPedidosUrgente(pnodoAbb nodo){
     if(nodo != nullptr){
         mostrarPedidosUrgente(nodo->izq);
     }
-    if(nodo->pedido.esUrgente() && nodo->pedido.getNumSeg() != 500){
+    if(nodo->pedido.getNumSeg() != 500 && nodo->pedido.esUrgente()){
         nodo->pedido.mostrar();
     }
     mostrarPedidosUrgente(nodo->der);
