@@ -263,11 +263,13 @@ void Gestor::dibujarAbb(){ //Apartado M
 }
 
 void Gestor::pedidosArbolE(){ //Apartado N 
+    cout << "\t" << setw(10) << "Los pedidos estandar son: " << endl;
     arbol.mostrarPedidosEstandar();
 }
 
 void Gestor::pedidosArbolU(){ //Apartado O
-
+    cout << "\t" << setw(10) << "Los pedidos urgentes son: " << endl;
+    arbol.mostrarPedidosUrgente();
 }
 
 void Gestor::PedidosInorden(){ //Apartado P
