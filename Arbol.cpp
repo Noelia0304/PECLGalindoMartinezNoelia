@@ -19,35 +19,6 @@ pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
     return nodo;
 }
 
-/*pnodoAbb Arbol::insertarOrdenNumSeg(pnodoAbb nodo, Pedido pedidoI)
-{
-    if(!nodo)
-        return new NodoArbol(pedidoI);
-    if(pedidoI.getNumSeg() <= nodo->pedido.getNumSeg())
-        nodo->der = insertar(nodo->der, pedidoI);
-    else
-        nodo->izq = insertar(nodo->izq, pedidoI);
-    return nodo;
-}*/
-
-void Arbol::mostrarPedidosEstandar(){
-    mostrarPedidosEstandar(raiz);
-    cout << '\n' ;
-}
-
-void Arbol::mostrarPedidosEstandar(pnodoAbb nodo){
-    if (nodo){
-        mostrarPedidosEstandar(nodo->izq);
-        if(!nodo->pedido.esUrgente()){
-            nodo->pedido.mostrar();
-        }
-        mostrarPedidosEstandar(nodo->der);
-    }
-}
-
-
-        
-
 void Arbol::pintar()
 {
     pintar(raiz);
@@ -175,6 +146,7 @@ int Arbol::numNodos(pnodoAbb nodo) {
         
     }
 }
+
 void Arbol::inorden(){
     inorden(raiz);
 }
@@ -186,6 +158,36 @@ void Arbol::inorden(pnodoAbb nodo) {
         
         inorden(nodo->der);
     } 
+}
+
+void Arbol::mostrarPedidosEstandar(){
+    mostrarPedidosEstandar(raiz);
+    cout << "\n" ;
+}
+
+void Arbol::mostrarPedidosEstandar(pnodoAbb nodo){
+    if (nodo != nullptr){
+        mostrarPedidosEstandar(nodo->izq);
+        if(!nodo->pedido.esUrgente() && nodo->pedido.getNumSeg() != 500) {
+            nodo->pedido.mostrar();
+        }
+        mostrarPedidosEstandar(nodo->der);
+    }
+}
+
+void Arbol::mostrarPedidosUrgente(){
+    mostrarPedidosUrgente(raiz);
+    cout << "\n";
+}
+
+void Arbol::mostrarPedidosUrgente(pnodoAbb nodo){
+    if(nodo != nullptr){
+        mostrarPedidosUrgente(nodo->izq);
+    }
+    if(nodo->pedido.esUrgente() && nodo->pedido.getNumSeg() != 500){
+        nodo->pedido.mostrar();
+    }
+    mostrarPedidosUrgente(nodo->der);
 }
 
 int Arbol::numImpares() {
