@@ -176,26 +176,16 @@ int Arbol::numNodos(pnodoAbb nodo) {
     }
 }
 void Arbol::inorden(){
-    Lista pedidosUrgentes, pedidosNoUrgentes;
-    return inorden(raiz, pedidosUrgentes, pedidosNoUrgentes);
+    inorden(raiz);
 }
 
-void Arbol::inorden(pnodoAbb nodo, Lista (pedidosUrgentes), Lista (pedidosNoUrgentes)) {
+void Arbol::inorden(pnodoAbb nodo) {
     if (nodo != nullptr) {
-        inorden(nodo->izq, pedidosUrgentes, pedidosNoUrgentes);
-
-        if (nodo->pedido.esUrgente()) {
-            // Insertar en orden ascendente en la lista de pedidos urgentes
-            pedidosUrgentes.insertarOrdenNumSeg(nodo->pedido);
-            pedidosUrgentes.mostrar();
-        } else {
-            // Insertar en orden ascendente en la lista de pedidos no urgentes
-            pedidosNoUrgentes.insertarOrdenNumSeg(nodo->pedido);
-            pedidosNoUrgentes.mostrar();
-        }
-
-        inorden(nodo->der, pedidosUrgentes, pedidosNoUrgentes);
-    }
+        inorden(nodo->izq);
+        nodo->pedido.mostrar();
+        
+        inorden(nodo->der);
+    } 
 }
 
 int Arbol::numImpares() {
