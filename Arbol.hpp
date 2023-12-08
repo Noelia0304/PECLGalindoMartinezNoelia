@@ -19,7 +19,7 @@ public:
     int numNodos();
     int numNodos(pnodoAbb nodo);
     void inorden();
-    void inorden(pnodoAbb nodo,Lista pedidosU,Lista pedidosNoUrgentes);
+    void inorden(pnodoAbb nodo);
     int numImpares();
     int numImpares(pnodoAbb nodo);
     void NodoHoja();
