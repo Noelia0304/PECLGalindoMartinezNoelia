@@ -37,8 +37,8 @@ public:
     void insertarPedidosArbol();
     int PedidosEnArbol();
     void dibujarAbb();
-    void PedidosArbolE();
-    void PedidosArbolU();
+    void pedidosArbolE();
+    void pedidosArbolU();
     void PedidosInorden();
     void buscarPedidosArbol();
     void NumSegImpar();
