@@ -276,15 +276,18 @@ void Gestor::pedidosArbolU(){ //Apartado O
 void Gestor::PedidosInorden(){ //Apartado P
     cout << "\t" << setw(10) << "Los pedidos en colocados en inorden son: " << endl;
     arbol.inorden();
+    cout << endl;
 }
 
 void Gestor::buscarPedidosArbol(){ //Apartado Q
     cout << "\t" << setw(10) << "Los pedidos buscados son: " << endl;
     arbol.buscarAbb();
+    cout << endl;
 }
 
 void Gestor::NumSegImpar(){ // Apartado R
-    cout <<  "\t"<< setw(10) << " Hay " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
+    cout << "\t"<< setw(10) << " Hay " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
+    cout << endl;
 }
 
 void Gestor::PedidosNodoHoja(){ //Apartado T
