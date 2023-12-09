@@ -257,6 +257,7 @@ int Gestor::PedidosEnArbol(){
 void Gestor::dibujarAbb(){ //Apartado M
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
+    pedidoAux.setId(generarId(pedidoAux));
     arbol.insertar(pedidoAux);
     insertarPedidosArbol();
     arbol.dibujar();
@@ -273,6 +274,7 @@ void Gestor::pedidosArbolU(){ //Apartado O
 }
 
 void Gestor::PedidosInorden(){ //Apartado P
+    cout << "\t" << setw(10) << "Los pedidos en colocados en inorden son: " << endl;
     arbol.inorden();
 }
 
