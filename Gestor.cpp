@@ -297,7 +297,12 @@ void Gestor::PedidosNodoHoja(){ //Apartado T
 }
 
 void Gestor::eliminarPedido(){ //Apartado U
-    
+    arbol.dibujar();
+    int numeroSeg;
+    cout << "inserta el numero de seguimiento del paquete que desees borrar" << endl; 
+    cin >> numeroSeg;
+    arbol.borrarNodoNumSeg(numeroSeg);
+    arbol.dibujar();
 }
 
 Gestor::~Gestor()
