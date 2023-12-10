@@ -227,7 +227,7 @@ void Arbol::NodoHoja(pnodoAbb nodo){
 }
 
 void Arbol::borrarNodoNumSeg(int numSeg){
-    return borrarNodoNumSeg(raiz, numSeg);
+    borrarNodoNumSeg(raiz, numSeg);
 }
 
 pnodoAbb Arbol::borrarNodoNumSeg(pnodoAbb nodo, int numSeg){
@@ -248,7 +248,7 @@ pnodoAbb Arbol::borrarNodoNumSeg(pnodoAbb nodo, int numSeg){
         }
 
         // Caso: Nodo con dos hijos
-        pnodoAbb temp = encontrarNodoMinimo(nodo->der);
+        pnodoAbb temp = encontrarMinimo(nodo->der);
         nodo->pedido = temp->pedido;  // Copia el pedido del nodo mínimo del subárbol derecho al nodo actual
         nodo->der = borrarNodoNumSeg(nodo->der, temp->pedido.getNumSeg());  // Elimina el nodo mínimo del subárbol derecho
     }
