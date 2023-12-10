@@ -27,6 +27,8 @@ public:
     void mostrarPedidosUrgente(pnodoAbb nodo);
     void NodoHoja();
     void NodoHoja(pnodoAbb nodo);
+    pnodoAbb borrarNodoNumSeg(pnodoAbb nodo, int numSeg);
+    void borrarNodoNumSeg(int numSeg);
     pnodoAbb encontrarMinimo(pnodoAbb nodo);
     pnodoAbb encontrarMaximo(pnodoAbb nodo);
     void buscarAbb();
