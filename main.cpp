@@ -122,7 +122,7 @@ int main(int argc, char** argv)
                 gestor.PedidosNodoHoja();
             break;
         case 'U':
-            //gestor.eliminarPedido();
+                gestor.eliminarPedido();
             break;
         case 'S':
             cout << "Saliendo del programa...\n";
