@@ -254,7 +254,7 @@ int Gestor::PedidosEnArbol(){
     return arbol.numNodos();  
 }
 
-void Gestor::dibujarAbb(){ //Apartado M
+void Gestor::dibujarAbb(){ 
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
     pedidoAux.setId(generarId(pedidoAux));
