@@ -263,40 +263,40 @@ void Gestor::dibujarAbb(){
     arbol.dibujar();
 }
 
-void Gestor::pedidosArbolE(){ //Apartado N 
+void Gestor::pedidosArbolE(){ 
     cout << "\t" << setw(10) << "Los pedidos estandar son: " << endl;
     arbol.mostrarPedidosEstandar();
 }
 
-void Gestor::pedidosArbolU(){ //Apartado O
+void Gestor::pedidosArbolU(){
     cout << "\t" << setw(10) << "Los pedidos urgentes son: " << endl;
     arbol.mostrarPedidosUrgente();
 }
 
-void Gestor::PedidosInorden(){ //Apartado P
+void Gestor::PedidosInorden(){
     cout << "\t" << setw(10) << "Los pedidos en colocados en inorden son: " << endl;
     arbol.inorden();
     cout << endl;
 }
 
-void Gestor::buscarPedidosArbol(){ //Apartado Q
+void Gestor::buscarPedidosArbol(){
     cout << "\t" << setw(10) << "Los pedidos buscados son: " << endl;
     arbol.buscarAbb();
     cout << endl;
 }
 
-void Gestor::NumSegImpar(){ // Apartado R
+void Gestor::NumSegImpar(){
     cout << "\t"<< setw(10) << " Hay " << arbol.numImpares() << " pedidos con numero de seguimiento impar " << endl;
     cout << endl;
 }
 
-void Gestor::PedidosNodoHoja(){ //Apartado T
+void Gestor::PedidosNodoHoja(){
     cout <<"\t" << setw(10) << " Los pedidos que estan en un NodoHoja son: " << endl;
     arbol.NodoHoja();
     cout << endl;
 }
 
-void Gestor::eliminarPedido(){ //Apartado U
+void Gestor::eliminarPedido(){
     arbol.dibujar();
     int numeroSeg;
     cout << "inserta el numero de seguimiento del paquete que desees borrar" << endl; 
