@@ -236,21 +236,21 @@ pnodoAbb Arbol::borrarNodoNumSeg(pnodoAbb nodo, int numSeg){
     } else if (numSeg > nodo->pedido.getNumSeg()) {
         nodo->der = borrarNodoNumSeg(nodo->der, numSeg);
     } else {
-        // Caso: Nodo con un solo hijo o sin hijos
+        
         if (!nodo->izq) {
             pnodoAbb temp = nodo->der;
             delete nodo;
-              return temp;// Retorna el hijo derecho para reemplazar el nodo eliminado
+              return temp;
         } else if (!nodo->der) {
             pnodoAbb temp = nodo->izq;
             delete nodo;
-            return temp;  // Retorna el hijo izquierdo para reemplazar el nodo eliminado
+            return temp;  
         }
 
-        // Caso: Nodo con dos hijos
+        
         pnodoAbb temp = encontrarMinimo(nodo->der);
-        nodo->pedido = temp->pedido;  // Copia el pedido del nodo mínimo del subárbol derecho al nodo actual
-        nodo->der = borrarNodoNumSeg(nodo->der, temp->pedido.getNumSeg());  // Elimina el nodo mínimo del subárbol derecho
+        nodo->pedido = temp->pedido;  
+        nodo->der = borrarNodoNumSeg(nodo->der, temp->pedido.getNumSeg());  
     }
     
     return nodo;
