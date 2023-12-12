@@ -254,14 +254,23 @@ void Gestor::insertarPedidosArbol(){
 int Gestor::PedidosEnArbol(){
     return arbol.numNodos();  
 }
-
-void Gestor::dibujarAbb(){ 
+void Gestor::iniciaAbb(){
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
     pedidoAux.setId(generarId(pedidoAux));
     arbol.insertar(pedidoAux);
-    insertarPedidosArbol();
-    arbol.dibujar();
+}
+
+void Gestor::dibujarAbb(){ 
+    if (arbol.numNodos() != 0){
+        insertarPedidosArbol();
+        arbol.dibujar();
+    }else{
+        iniciaAbb();
+        insertarPedidosArbol();
+        arbol.dibujar();
+    }
+    
 }
 
 void Gestor::pedidosArbolE(){ 
