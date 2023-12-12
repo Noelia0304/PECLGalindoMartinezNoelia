@@ -33,6 +33,8 @@ public:
     pnodoAbb encontrarMaximo(pnodoAbb nodo);
     void buscarAbb();
     void buscarAbb(pnodoAbb nodo);
+    void eliminar();
+    void eliminar(pnodoAbb nodo);
     ~Arbol();
 
 private:
