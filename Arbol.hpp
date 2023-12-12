@@ -12,7 +12,6 @@ class Arbol
 public:
     Arbol();
     void insertar(Pedido pedido);
-    
     void pintar();
     void dibujar();
     int numNodos();
@@ -34,7 +33,7 @@ public:
     void buscarAbb();
     void buscarAbb(pnodoAbb nodo);
     void eliminar();
-    void eliminar(pnodoAbb nodo);
+    pnodoAbb eliminar(pnodoAbb nodo);
     ~Arbol();
 
 private:
