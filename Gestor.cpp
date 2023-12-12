@@ -226,6 +226,7 @@ void Gestor:: reiniciar()
     borraPedidosColas();
     ListaUrgente.eliminar();
     ListaEstandar.eliminar();
+    arbol.eliminar();
     
     for(int i = 0; i < tamanoArrayId; i++){
         arrayId[i] = 0;
@@ -233,7 +234,7 @@ void Gestor:: reiniciar()
     for(int i = 0; i < tamanoArrayNumSeg; i++){
         arrayNumSeg[i] = 0;
     }
-    
+    arbol.numNodos() = 0;
     tamanoArrayId = 0;
     tamanoArrayNumSeg = 0;
 }
