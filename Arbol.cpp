@@ -304,6 +304,17 @@ void Arbol::buscarAbb(pnodoAbb nodo){
     
     }
 }
+void Arbol::eliminar(){
+    eliminar(raiz);
+}
+
+void Arbol::eliminar(pnodoAbb nodo){
+    if(nodo != nullptr){
+        eliminar(nodo->izq);
+        eliminar(nodo->der);
+        delete nodo;
+    }
+}
 
 Arbol::~Arbol()
 {
